@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atmosphere Collection — Harmony & Balance</title>
-  <meta name="description" content="Facial tools, LED mirrors, grooming and skincare companions. Harmony & Balance Atmosphere Collection." />
+  <title>Aromatherapy — Harmony & Balance</title>
+  <meta name="description" content="Essential oil diffusers, aroma devices, and scent wellness tools. Harmony & Balance Aromatherapy collection." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,22 +22,23 @@
 <!-- ════ HEADER ════ -->
 <header id="site-header" class="is-top">
   <div class="header__inner">
-    <a href="../index.html" class="header__logo" aria-label="Harmony & Balance home">
-      <img src="../images/h_n_b_logo.svg" alt="Harmony & Balance" />
+    <a href="../index.html" class="header__logo" aria-label="Harmony &amp; Balance home">
+      <span class="logo-text">HARMONY &amp; BALANCE</span>
     </a>
     <nav class="header__nav" aria-label="Main navigation">
       <ul class="nav__list">
         <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
         <li class="nav__item">
-          <a href="#" class="nav__link is-active">
+          <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">
             Collections
             <svg class="nav__caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
           </a>
-          <div class="nav__dropdown">
-            <a href="atmosphere.html"     class="nav__dropdown-link"><span class="nav__dropdown-icon">✨</span> Atmosphere</a>
-            <a href="sleep.html"      class="nav__dropdown-link"><span class="nav__dropdown-icon">🌙</span> Sleep</a>
-            <a href="movement.html"   class="nav__dropdown-link"><span class="nav__dropdown-icon">🧘</span> Movement</a>
-            <a href="atmosphere.html" class="nav__dropdown-link"><span class="nav__dropdown-icon">🌿</span> Atmosphere</a>
+          <div class="nav__dropdown" role="menu">
+            <a href="beauty.html"      class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">✨</span> Beauty Technology</a>
+            <a href="sleep.html"       class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🌙</span> Sleep &amp; Sound</a>
+            <a href="movement.html"    class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🧘</span> Yoga &amp; Movement</a>
+            <a href="atmosphere.html"  class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🌿</span> Aromatherapy</a>
+            <a href="hydration.html"   class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">💧</span> Hydration &amp; Environment</a>
           </div>
         </li>
         <li class="nav__item"><a href="blog/index.html" class="nav__link">Journal</a></li>
@@ -65,10 +66,11 @@
         Collections <svg width="14" height="14" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
       </button>
       <div id="mobile-sub-collections" class="mobile-nav__sub">
-        <a href="atmosphere.html"     class="mobile-nav__sub-link">✨ Atmosphere</a>
-        <a href="sleep.html"      class="mobile-nav__sub-link">🌙 Sleep</a>
-        <a href="movement.html"   class="mobile-nav__sub-link">🧘 Movement</a>
-        <a href="atmosphere.html" class="mobile-nav__sub-link">🌿 Atmosphere</a>
+        <a href="beauty.html"      class="mobile-nav__sub-link">✨ Beauty Technology</a>
+        <a href="sleep.html"       class="mobile-nav__sub-link">🌙 Sleep &amp; Sound</a>
+        <a href="movement.html"    class="mobile-nav__sub-link">🧘 Yoga &amp; Movement</a>
+        <a href="atmosphere.html"  class="mobile-nav__sub-link">🌿 Aromatherapy</a>
+        <a href="hydration.html"   class="mobile-nav__sub-link">💧 Hydration &amp; Environment</a>
       </div>
     </li>
     <li><a href="blog/index.html"        class="mobile-nav__link">Journal</a></li>
@@ -87,10 +89,10 @@
   <div class="cat-hero__overlay"></div>
   <div class="cat-hero__content">
     <span class="eyebrow">Collection 04</span>
-    <h1>Atmosphere</h1>
-    <p>Facial tools, LED mirrors, grooming devices, and skincare companions. Everything your routine needs to feel more intentional—and more radiant.</p>
+    <h1>Aromatherapy</h1>
+    <p>Scent reaches the brain faster than any other sense. These diffusers don't just fill a room — they shift it. The right fragrance at the right moment is the fastest way to change how a space — and a mood — feels.</p>
     <div class="btn-row" style="margin-top:var(--space-8);">
-      <a href="#products" class="btn btn--dark">Shop the Collection</a>
+      <a href="#products" class="btn btn--dark">Explore the Collection</a>
     </div>
   </div>
 </section>
@@ -99,68 +101,45 @@
 <!-- ════ PRODUCT GRID ════ -->
 <section id="products" class="products section">
   <div class="container">
-
-    <!-- Filters -->
     <div class="products__filters reveal">
       <button class="filter-btn is-active">All</button>
-      <button class="filter-btn">Facial Devices</button>
-      <button class="filter-btn">Mirrors</button>
-      <button class="filter-btn">Grooming</button>
-      <button class="filter-btn">Skincare Tools</button>
+      <button class="filter-btn">Ultrasonic Diffusers</button>
+      <button class="filter-btn">Aroma Mist</button>
+      <button class="filter-btn">Portable</button>
     </div>
-
     <div class="products__grid">
-
-      <!-- Product 1 -->
       <div class="product-card reveal reveal--delay-1">
         <div class="product-card__img-wrap">
-          <img class="product-card__img" src="../images/DIFFUSER.jpg" alt="LED Face Device" />
+          <img class="product-card__img" src="../images/DIFFUSER.jpg" alt="Calm Cloud Aroma Diffuser" />
           <span class="product-card__badge badge badge--gold">Bestseller</span>
           <button class="product-card__wishlist" aria-label="Add to wishlist">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </button>
         </div>
         <div class="product-card__body">
-          <div class="product-card__category">Facial Device</div>
-          <h3 class="product-card__name">Sonic Glow Facial Wand</h3>
-          <p class="product-card__desc">Microcurrent + LED light therapy in a travel-ready silhouette. Three modes. Zero compromise.</p>
+          <div class="product-card__category">Ultrasonic Diffuser</div>
+          <h3 class="product-card__name">Calm Cloud Aroma Diffuser</h3>
+          <p class="product-card__desc">500ml ultrasonic mist, eight ambient light modes, four-hour continuous diffusion. Quiet enough to sleep through. Elegant enough to be part of the room. This is the diffuser people keep buying for other people.</p>
           <div class="product-card__footer">
-            <span class="product-card__price">$49.99</span>
+            <span class="product-card__price">$44.99</span>
             <button class="product-card__cta" aria-label="View product">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
             </button>
           </div>
         </div>
       </div>
-
-      <!-- Product 2 -->
       <div class="product-card reveal reveal--delay-2">
         <div class="product-card__img-wrap">
-          <img class="product-card__img" src="../images/MIRRORS.jpg" alt="LED Vanity Mirror" />
+          <img class="product-card__img" src="../images/DIFFUSER.jpg" alt="Pocket Calm Personal Diffuser" />
+          
+          <button class="product-card__wishlist" aria-label="Add to wishlist">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
         </div>
         <div class="product-card__body">
-          <div class="product-card__category">Mirror</div>
-          <h3 class="product-card__name">Halo LED Vanity Mirror</h3>
-          <p class="product-card__desc">360° halo lighting, 5× magnification, foldable travel design. Your most flattering getting-ready ritual starts here.</p>
-          <div class="product-card__footer">
-            <span class="product-card__price">$34.99</span>
-            <button class="product-card__cta" aria-label="View product">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 3 — placeholder -->
-      <div class="product-card reveal reveal--delay-3">
-        <div class="product-card__img-wrap">
-          <img class="product-card__img" src="../images/DIFFUSER.jpg" alt="Eye Massager" />
-          <span class="product-card__badge badge badge--dark">New</span>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__category">Skincare Tool</div>
-          <h3 class="product-card__name">Calm Eye Lift Massager</h3>
-          <p class="product-card__desc">Vibration + warmth for the eye contour. Two minutes. Perceptibly refreshed.</p>
+          <div class="product-card__category">Portable Diffuser</div>
+          <h3 class="product-card__name">Pocket Calm Personal Diffuser</h3>
+          <p class="product-card__desc">USB-powered, palm-sized, and works anywhere you plug in. Office desk. Hotel nightstand. Car cupholder. Calm isn't a destination — it's wherever you are.</p>
           <div class="product-card__footer">
             <span class="product-card__price">$24.99</span>
             <button class="product-card__cta" aria-label="View product">
@@ -169,7 +148,26 @@
           </div>
         </div>
       </div>
-
+      <div class="product-card reveal reveal--delay-3">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="../images/DIFFUSER.jpg" alt="Sanctuary Mist Tower" />
+          <span class="product-card__badge badge badge--dark">New</span>
+          <button class="product-card__wishlist" aria-label="Add to wishlist">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__category">Aroma Mist System</div>
+          <h3 class="product-card__name">Sanctuary Mist Tower</h3>
+          <p class="product-card__desc">360-degree ultrasonic diffusion for larger living spaces. 12-hour runtime, whisper-quiet operation, auto-shutoff. Designed to anchor a room the same way a candle does — but cleaner, safer, and refillable.</p>
+          <div class="product-card__footer">
+            <span class="product-card__price">$64.99</span>
+            <button class="product-card__cta" aria-label="View product">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -178,27 +176,25 @@
 <!-- ════ FEATURE HIGHLIGHT ════ -->
 <section class="feature-highlight section">
   <div class="container">
-
     <div class="feature-highlight__row reveal">
       <div class="feature-highlight__image">
-        <img src="../images/DIFFUSER.jpg" alt="Sonic Glow device in use" />
+        <img src="../images/DIFFUSER.jpg" alt="One inhale. The whole room changes." />
       </div>
       <div class="feature-highlight__content">
-        <span class="eyebrow">Why it works</span>
-        <h3>Technology designed to feel like self-care, not science.</h3>
-        <p>Every Harmony & Balance beauty device is engineered to fit the rhythm of real life—intuitive enough to use in two minutes, effective enough to be worth returning to every day.</p>
+        <span class="eyebrow">The scent-mood connection</span>
+        <h3>One inhale. The whole room changes.</h3>
+        <p>Harmony & Balance aromatherapy devices are built around a simple truth: fragrance is the fastest-acting mood tool available. These products aren't accessories — they're the foundation of a calmer, more intentional environment.</p>
         <ul class="feature-highlight__list">
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Microcurrent + LED light in one compact form</li>
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Three adjustable intensity modes</li>
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Travel-ready, rechargeable USB-C</li>
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Works on all skin tones and types</li>
+          <li class="feature-list__item"><span class="feature-list__dot"></span> Ultrasonic cold-water diffusion — no heat, no degradation of essential oils</li>
+          <li class="feature-list__item"><span class="feature-list__dot"></span> Runtime from 2 to 12 hours depending on model and mist setting</li>
+          <li class="feature-list__item"><span class="feature-list__dot"></span> BPA-free reservoirs, auto water-level shutoff</li>
+          <li class="feature-list__item"><span class="feature-list__dot"></span> Whisper-quiet operation — under 25dB on low setting</li>
         </ul>
         <div class="btn-row">
           <a href="../index.html#contact" class="btn btn--dark">Wholesale Enquiry</a>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -207,33 +203,33 @@
 <section class="benefits section--sm">
   <div class="container">
     <div class="benefits__grid">
-      <div class="benefit-item reveal">
+      <div class="benefit-item reveal ">
         <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
         </div>
-        <div class="benefit-item__title">Safe &amp; Tested</div>
-        <p class="benefit-item__text">All devices are safety-certified and dermatologist-approved for home use.</p>
+        <div class="benefit-item__title">Cold Ultrasonic Mist</div>
+        <p class="benefit-item__text">Zero heat means full therapeutic potency — scent exactly as nature designed it.</p>
       </div>
       <div class="benefit-item reveal reveal--delay-1">
         <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </div>
-        <div class="benefit-item__title">2-Min Ritual</div>
-        <p class="benefit-item__text">Designed for real life—every device delivers results in under two minutes.</p>
+        <div class="benefit-item__title">12-Hour Runtime</div>
+        <p class="benefit-item__text">Diffuse through sleep, work, or an entire afternoon without interruption.</p>
       </div>
       <div class="benefit-item reveal reveal--delay-2">
         <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </div>
-        <div class="benefit-item__title">Travel Ready</div>
-        <p class="benefit-item__text">Compact, foldable, USB-C charged—your ritual wherever you go.</p>
+        <div class="benefit-item__title">BPA-Free &amp; Safe</div>
+        <p class="benefit-item__text">Non-toxic materials throughout. Built for homes with children, pets, and people who pay attention.</p>
       </div>
       <div class="benefit-item reveal reveal--delay-3">
         <div class="benefit-item__icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
-        <div class="benefit-item__title">Brand Program</div>
-        <p class="benefit-item__text">Every SKU is part of a cohesive brand world—not just a single product.</p>
+        <div class="benefit-item__title">Gift Category Leader</div>
+        <p class="benefit-item__text">Top-performing gift SKU in wellness retail. Repeat-purchase potential is high.</p>
       </div>
     </div>
   </div>
@@ -244,8 +240,8 @@
 <div class="newsletter-strip">
   <div class="newsletter-strip__inner">
     <div class="newsletter-strip__copy">
-      <div class="newsletter-strip__eyebrow">Stay in the Ritual</div>
-      <h3 class="newsletter-strip__heading">New arrivals, brand stories,<br>and ritual inspiration.</h3>
+      <div class="newsletter-strip__eyebrow">Breathe Different</div>
+      <h3 class="newsletter-strip__heading">New scents, product drops,<br>and atmosphere inspiration.</h3>
     </div>
     <form class="newsletter-strip__form" onsubmit="return false;">
       <input class="newsletter-input" type="email" placeholder="Your email address" />
@@ -258,16 +254,17 @@
   <div class="footer__inner">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img class="footer__logo" src="../images/h_n_b_logo.svg" alt="Harmony & Balance" />
-        <p class="footer__tagline">An elevated world of beauty, sleep, movement, and atmosphere.</p>
+        <span class="logo-text footer__logo-text">HARMONY &amp; BALANCE</span>
+        <p class="footer__tagline">Beauty. Sleep. Movement. Atmosphere. One brand, one world.</p>
       </div>
       <div>
         <div class="footer__col-label">Collections</div>
         <ul class="footer__nav-list">
-          <li><a href="atmosphere.html"     class="footer__nav-link">Atmosphere</a></li>
-          <li><a href="sleep.html"      class="footer__nav-link">Sleep</a></li>
-          <li><a href="movement.html"   class="footer__nav-link">Movement</a></li>
-          <li><a href="atmosphere.html" class="footer__nav-link">Atmosphere</a></li>
+          <li><a href="beauty.html"      class="footer__nav-link">Beauty Technology</a></li>
+          <li><a href="sleep.html"       class="footer__nav-link">Sleep &amp; Sound</a></li>
+          <li><a href="movement.html"    class="footer__nav-link">Yoga &amp; Movement</a></li>
+          <li><a href="atmosphere.html"  class="footer__nav-link">Aromatherapy</a></li>
+          <li><a href="hydration.html"   class="footer__nav-link">Hydration &amp; Environment</a></li>
         </ul>
       </div>
       <div>
