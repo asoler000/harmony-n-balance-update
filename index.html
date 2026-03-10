@@ -1,499 +1,490 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harmony & Balance | Wellness & Beauty</title>
-  <meta name="description" content="An elevated world of beauty, sleep, movement, and atmosphere. Harmony & Balance wellness essentials designed for everyday ritual." />
-
-  <!-- ══ SEO + Social Sharing Meta ═══════════════════════════════
-       Open Graph → iMessage, Facebook, LinkedIn, Slack previews
-       Twitter Card → X/Twitter previews
-       Standard SEO → Google, Bing
-       ─────────────────────────────────────────────────────────── -->
-
-  <!-- Standard SEO -->
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Harmony & Balance / Lifeworks Technology Group" />
-  <meta name="keywords" content="wellness beauty, facial devices, diffusers, sleep tools, yoga, aroma rituals, anti-aging, beauty tools, harmony and balance" />
-  <link rel="canonical" href="https://harmonyandbalance.com/" />
-
-  <!-- Open Graph (Facebook, LinkedIn, iMessage, Slack, Discord) -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:site_name"   content="Harmony & Balance" />
-  <meta property="og:title"       content="Harmony & Balance | Wellness & Beauty" />
-  <meta property="og:description" content="A design-forward world of beauty devices, sleep tools, movement essentials, and aroma rituals. Crafted to help you feel restored, confident, and radiant." />
-  <meta property="og:url"         content="https://harmonyandbalance.com/" />
-  <meta property="og:image"       content="https://harmonyandbalance.com/images/og-share.jpg" />
-  <meta property="og:image:width"  content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"   content="Harmony & Balance — Wellness & Beauty for a More Harmonious Way of Life" />
-  <meta property="og:locale"      content="en_US" />
-
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:site"        content="@harmonybalance" />
-  <meta name="twitter:title"       content="Harmony & Balance | Wellness & Beauty" />
-  <meta name="twitter:description" content="A design-forward world of beauty devices, sleep tools, movement essentials, and aroma rituals. Crafted to help you feel restored, confident, and radiant." />
-  <meta name="twitter:image"       content="https://harmonyandbalance.com/images/og-share.jpg" />
-  <meta name="twitter:image:alt"   content="Harmony & Balance — Wellness & Beauty" />
-
-  <!-- Favicon (update path once you have the file) -->
-  <link rel="icon"             type="image/svg+xml"  href="images/favicon.svg" />
-  <link rel="icon"             type="image/png"      href="images/favicon-32.png" sizes="32x32" />
-  <link rel="apple-touch-icon"                       href="images/apple-touch-icon.png" sizes="180x180" />
-  <meta name="theme-color" content="#c9a96e" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet" />
-
-  <!-- Stylesheets — order matters -->
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-</head>
-<body>
-
-<!-- SCROLL PROGRESS (visible on long pages) -->
-<div id="scroll-progress"></div>
-
-<!-- SITE HEADER -->
-<header id="site-header" class="is-top">
-  <div class="header__inner">
-
-    <!-- Logo -->
-    <a href="index.html" class="header__logo" aria-label="Harmony & Balance home">
-      <span class="logo-text" aria-hidden="false">HARMONY &amp; BALANCE</span>
-    </a>
-
-    <!-- Desktop nav -->
-    <nav class="header__nav" aria-label="Main navigation">
-      <ul class="nav__list">
-
-        <li class="nav__item">
-          <a href="index.html" class="nav__link is-active">Home</a>
-        </li>
-
-        <!-- Categories dropdown -->
-        <li class="nav__item">
-          <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">
-            Collections
-            <svg class="nav__caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 1l4 4 4-4"/>
-            </svg>
-          </a>
-          <div class="nav__dropdown" role="menu">
-            <a href="pages/beauty.html"     class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">&#10024;</span> Beauty</a>
-            <a href="pages/sleep.html"      class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">&#9790;</span> Sleep</a>
-            <a href="pages/movement.html"   class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">&#10047;</span> Movement</a>
-            <a href="pages/atmosphere.html" class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">&#10022;</span> Atmosphere</a>
-          </div>
-        </li>
-
-        <li class="nav__item">
-          <a href="pages/blog/index.html" class="nav__link">Journal</a>
-        </li>
-
-        <li class="nav__item">
-          <a href="#about" class="nav__link">About</a>
-        </li>
-
-        <li class="nav__item">
-          <a href="#contact" class="nav__link">Contact</a>
-        </li>
-
-      </ul>
-    </nav>
-
-    <!-- Header actions -->
-    <div class="header__actions">
-      <a href="#contact" class="btn btn--dark">Request Line Sheet</a>
-      <!-- Hamburger (mobile) -->
-      <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span class="hamburger__bar"></span>
-        <span class="hamburger__bar"></span>
-        <span class="hamburger__bar"></span>
-      </button>
-    </div>
-
-  </div>
-</header>
-
-<!-- MOBILE MENU -->
-<nav id="mobile-menu" aria-label="Mobile navigation">
-  <ul class="mobile-nav__list">
-
-    <li>
-      <a href="index.html" class="mobile-nav__link">Home</a>
-    </li>
-
-    <li>
-      <button class="mobile-nav__link mobile-nav__toggle"
-        data-sub="mobile-sub-collections" aria-expanded="false">
-        Collections
-        <svg width="14" height="14" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M1 1l4 4 4-4"/>
-        </svg>
-      </button>
-      <div id="mobile-sub-collections" class="mobile-nav__sub">
-        <a href="pages/beauty.html"     class="mobile-nav__sub-link">&#10024; Beauty</a>
-        <a href="pages/sleep.html"      class="mobile-nav__sub-link">&#9790; Sleep</a>
-        <a href="pages/movement.html"   class="mobile-nav__sub-link">&#10047; Movement</a>
-        <a href="pages/atmosphere.html" class="mobile-nav__sub-link">&#10022; Atmosphere</a>
-      </div>
-    </li>
-
-    <li><a href="pages/blog/index.html" class="mobile-nav__link">Journal</a></li>
-    <li><a href="#about"   class="mobile-nav__link">About</a></li>
-    <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
-
-  </ul>
-  <div class="mobile-nav__footer">
-    <a href="#contact" class="btn btn--dark" style="width:100%; justify-content:center;">Request Line Sheet</a>
-  </div>
-</nav>
-
-<!-- HERO SLIDESHOW -->
-<!-- Custom cursor dot -->
-<div id="cursor-dot"></div>
-
-<section id="hero">
-
-  <!-- Mouse-light orb -->
-  <div id="mouse-light"></div>
-
-  <!-- Image background layer -->
-  <div id="hero-bg"></div>
-
-  <!-- Final slide IMAGE fallback: brand-ethos.png with cinematic push-in zoom.
-       Shows when video is blocked (iOS Low Power Mode, slow connection, no .mp4).
-       When video plays it fades in on top and covers this layer completely. -->
-  <div id="hero-final-bg"></div>
-
-  <!-- Video background (final slide) — sits above image fallback -->
-  <div id="hero-video-wrap">
-    <video id="hero-video" autoplay muted loop playsinline preload="auto"
-           poster="images/brand-ethos.png">
-      <source src="images/brand-ethos.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <!-- Overlays -->
-  <div id="hero-overlay-radial"></div>
-  <div id="hero-overlay-bottom"></div>
-
-  <div id="hero-inner">
-
-    <!-- Standard slide content -->
-    <div id="hero-content">
-      <div id="hero-content-inner">
-        <div id="slide-eyebrow"></div>
-        <div id="slide-word-wrap"><span id="slide-word"></span></div>
-        <p id="slide-title"></p>
-        <p id="slide-body"></p>
-      </div>
-    </div>
-
-    <!-- Hero bottom bar: dots LEFT + full-width progress bar RIGHT (UP 7) -->
-    <div id="hero-bottom">
-      <div id="dots"></div>
-      <div id="slide-progress"><div id="slide-progress-bar"></div></div>
-    </div>
-
-  </div>
-
-
-    <!-- Final slide (video card) -->
-    <div id="final-slide">
-      <h1 id="final-headline"><!-- JS builds letters here --></h1>
-      <div id="final-divider"></div>
-      <p id="final-tagline">Wellness and beauty for a more harmonious way of life.</p>
-      <p id="final-body">
-        A design-forward world of rituals across beauty, sleep, movement, and atmosphere—<br>
-        created to help you feel restored, confident, and radiant.
-      </p>
-      <div id="dots-final"></div>
-      <div id="final-progress-wrap"><div id="final-progress-bar"></div></div>
-    </div>
-
-</section>
-
-<!-- BRAND STORY -->
-<section id="about" class="brand-story section">
-  <div class="container">
-    <div class="brand-story__grid">
-
-      <div class="brand-story__text reveal">
-        <span class="eyebrow">About the Brand</span>
-        <h2>Wellness and beauty,<br>shaped into daily ritual.</h2>
-        <p>Harmony & Balance brings together beauty devices, sleep tools, movement essentials, mirrors, and aroma rituals in one intentional lifestyle world. The feeling is calm, elevated, and quietly luxurious—more like discovering a beautiful object than buying a gadget.</p>
-        <p>Our philosophy is simple: when rituals feel beautiful, people return to them. And when they return to them, they feel more restored, more confident, and more themselves.</p>
-        <div class="btn-row">
-          <a href="#categories" class="btn btn--dark">Explore Collections</a>
-          <a href="pages/blog/index.html" class="btn btn--outline">Our Journal</a>
-        </div>
-      </div>
-
-      <div class="brand-pillars reveal reveal--delay-2">
-        <div class="pillar">
-          <div class="pillar__icon">?</div>
-          <div class="pillar__label">Beauty</div>
-          <p class="pillar__text">Facial tools, mirrors, grooming, and skincare companions for radiant-looking routines.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar__icon">??</div>
-          <div class="pillar__label">Sleep</div>
-          <p class="pillar__text">Sound and rest rituals that help create softer endings and calmer beginnings.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar__icon">??</div>
-          <div class="pillar__label">Movement</div>
-          <p class="pillar__text">Yoga and recovery essentials designed to support flexibility, release, and alignment.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar__icon">??</div>
-          <div class="pillar__label">Atmosphere</div>
-          <p class="pillar__text">Aroma and sensory objects that transform space, mood, and daily rhythm.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CATEGORY SHOWCASE -->
-<section id="categories" class="categories section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow">The Collections</span>
-      <h2>One brand. Four worlds.</h2>
-      <p>Every product exists inside a larger ritual—beauty that flows into sleep, movement that opens into atmosphere.</p>
-    </div>
-    <div class="categories__grid">
-
-      <a href="pages/beauty.html" class="cat-card reveal reveal--delay-1">
-        <img class="cat-card__image" src="images/FACE-DEVICES.png" alt="Beauty collection" />
-        <div class="cat-card__overlay"></div>
-        <div class="cat-card__content">
-          <div class="cat-card__eyebrow">Collection 01</div>
-          <h3 class="cat-card__title">Beauty</h3>
-          <span class="cat-card__link">Explore ?</span>
-        </div>
-      </a>
-
-      <a href="pages/sleep.html" class="cat-card reveal reveal--delay-2">
-        <img class="cat-card__image" src="images/SOUND-MACHINE.png" alt="Sleep collection" />
-        <div class="cat-card__overlay"></div>
-        <div class="cat-card__content">
-          <div class="cat-card__eyebrow">Collection 02</div>
-          <h3 class="cat-card__title">Sleep</h3>
-          <span class="cat-card__link">Explore ?</span>
-        </div>
-      </a>
-
-      <a href="pages/movement.html" class="cat-card reveal reveal--delay-3">
-        <img class="cat-card__image" src="images/yoga-wheel.jpeg" alt="Movement collection" />
-        <div class="cat-card__overlay"></div>
-        <div class="cat-card__content">
-          <div class="cat-card__eyebrow">Collection 03</div>
-          <h3 class="cat-card__title">Movement</h3>
-          <span class="cat-card__link">Explore ?</span>
-        </div>
-      </a>
-
-      <a href="pages/atmosphere.html" class="cat-card reveal reveal--delay-4">
-        <img class="cat-card__image" src="images/DIFFUSER.png" alt="Atmosphere collection" />
-        <div class="cat-card__overlay"></div>
-        <div class="cat-card__content">
-          <div class="cat-card__eyebrow">Collection 04</div>
-          <h3 class="cat-card__title">Atmosphere</h3>
-          <span class="cat-card__link">Explore ?</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- BRAND VALUES -->
-<section class="brand-values section--sm">
-  <div class="container">
-    <div class="brand-values__grid">
-      <div class="value-item reveal">
-        <div class="value-item__number">4</div>
-        <div class="value-item__label">Collections</div>
-        <p class="value-item__text">A complete lifestyle world: Beauty, Sleep, Movement, Atmosphere.</p>
-      </div>
-      <div class="value-item reveal reveal--delay-1">
-        <div class="value-item__number">100%</div>
-        <div class="value-item__label">Brand Cohesion</div>
-        <p class="value-item__text">Every product designed to live alongside the others—visually and ritually.</p>
-      </div>
-      <div class="value-item reveal reveal--delay-2">
-        <div class="value-item__number">1</div>
-        <div class="value-item__label">Brand Story</div>
-        <p class="value-item__text">Harmony & Balance: wellness for a more harmonious way of life.</p>
-      </div>
-      <div class="value-item reveal reveal--delay-3">
-        <div class="value-item__number">—</div>
-        <div class="value-item__label">Everyday Ritual</div>
-        <p class="value-item__text">Products designed to be returned to — again, and again, and again.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOME CTA + CONTACT -->
-<section id="contact" class="home-cta section">
-  <div class="container">
-    <div class="home-cta__grid">
-
-      <div class="home-cta__card reveal">
-        <span class="eyebrow">For Buyers & Retailers</span>
-        <h3>Explore the world behind Harmony & Balance.</h3>
-        <p>A deeper brand story—philosophy, product categories, and retail-ready positioning designed to connect with buyers and consumers who believe beauty should feel meaningful.</p>
-        <div class="btn-row">
-          <a href="#about" class="btn btn--dark">
-            Our Story
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-          <button class="btn btn--outline">Request Line Sheet</button>
-        </div>
-      </div>
-
-      <div class="contact-glass reveal reveal--delay-2">
-        <div>
-          <span class="eyebrow">Contact</span>
-          <p style="margin-bottom:var(--space-6);">Clean. Direct. A simple way to reach the brand and start the conversation that matters.</p>
-        </div>
-        <div>
-          <div class="contact-detail">
-            <div class="contact-detail__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-            </div>
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b636e6767644b636a79666465726a656f696a676a65686e25686466">[email&#160;protected]</a>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            (000) 000-0000
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            Mon — Fri, 9am — 6pm EST
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER STRIP -->
-<div class="newsletter-strip">
-  <div class="newsletter-strip__inner">
-    <div class="newsletter-strip__copy">
-      <div class="newsletter-strip__eyebrow">Stay Connected</div>
-      <h3 class="newsletter-strip__heading">New arrivals, brand stories,<br>and ritual inspiration.</h3>
-    </div>
-    <form class="newsletter-strip__form" onsubmit="return false;">
-      <input class="newsletter-input" type="email" placeholder="Your email address" aria-label="Email address" />
-      <button class="btn btn--gold" type="submit">Subscribe</button>
-    </form>
-  </div>
-</div>
-
-<!-- SITE FOOTER -->
-<footer id="site-footer">
-  <div class="footer__inner">
-    <div class="footer__grid">
-
-      <!-- Brand column -->
-      <div class="footer__brand">
-        <span class="footer__logo-text">HARMONY &amp; BALANCE</span>
-        <p class="footer__tagline">An elevated world of beauty, sleep, movement, and atmosphere—designed to bring calm, confidence, and balance into everyday ritual.</p>
-        <div class="footer__social">
-          <!-- Instagram -->
-          <a href="#" class="social-icon" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-          </a>
-          <!-- Pinterest -->
-          <a href="#" class="social-icon" aria-label="Pinterest">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.771 0 3.132-1.867 3.132-4.562 0-2.387-1.715-4.055-4.163-4.055-2.836 0-4.5 2.126-4.5 4.323 0 .856.33 1.773.741 2.274a.3.3 0 0 1 .069.286c-.076.313-.244.995-.277 1.134-.044.183-.146.222-.337.134C6.41 15.21 5.5 13.42 5.5 11.98 5.5 8.955 7.7 6.2 12.2 6.2c3.568 0 6.34 2.541 6.34 5.937 0 3.542-2.233 6.392-5.333 6.392-1.042 0-2.023-.542-2.359-1.181l-.641 2.397c-.232.894-.859 2.013-1.28 2.695A10 10 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-            </svg>
-          </a>
-          <!-- TikTok -->
-          <a href="#" class="social-icon" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.26 8.26 0 0 0 4.84 1.55V6.79a4.85 4.85 0 0 1-1.07-.1z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Collections column -->
-      <div>
-        <div class="footer__col-label">Collections</div>
-        <ul class="footer__nav-list">
-          <li><a href="pages/beauty.html"     class="footer__nav-link">Beauty</a></li>
-          <li><a href="pages/sleep.html"      class="footer__nav-link">Sleep</a></li>
-          <li><a href="pages/movement.html"   class="footer__nav-link">Movement</a></li>
-          <li><a href="pages/atmosphere.html" class="footer__nav-link">Atmosphere</a></li>
-        </ul>
-      </div>
-
-      <!-- Company column -->
-      <div>
-        <div class="footer__col-label">Company</div>
-        <ul class="footer__nav-list">
-          <li><a href="#about"               class="footer__nav-link">About Us</a></li>
-          <li><a href="pages/blog/index.html" class="footer__nav-link">Journal</a></li>
-          <li><a href="#contact"             class="footer__nav-link">Contact</a></li>
-          <li><a href="#"                    class="footer__nav-link">Press</a></li>
-        </ul>
-      </div>
-
-      <!-- Retail column -->
-      <div>
-        <div class="footer__col-label">Retailers</div>
-        <ul class="footer__nav-list">
-          <li><a href="#contact" class="footer__nav-link">Request Line Sheet</a></li>
-          <li><a href="#contact" class="footer__nav-link">Wholesale Enquiries</a></li>
-          <li><a href="#"        class="footer__nav-link">Find a Retailer</a></li>
-          <li><a href="#"        class="footer__nav-link">Brand Assets</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="footer__bottom">
-      <p class="footer__copy">
-        harmony &nbsp;<span>?</span>&nbsp; balance &nbsp;—&nbsp; — 2026 all rights reserved
-      </p>
-      <div class="footer__legal-links">
-        <a href="#" class="footer__legal-link">Privacy</a>
-        <a href="#" class="footer__legal-link">Terms</a>
-        <a href="#" class="footer__legal-link">Accessibility</a>
-      </div>
-    </div>
-
-  </div>
-</footer>
-
-<!-- SCRIPTS  (load order: nav ? hero) -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/nav.js"></script>
-<script src="js/hero.js"></script>
-
-</body>
-</html>
+/* ============================================================
+   HARMONY & BALANCE ‚Äî hero.js  v5
+   The definitive hybrid. All 9 upgrades live here.
+
+   FROM v4 (ours):
+   ‚úÖ FIX 1 ‚Äî Lerp orb: 720px rolling light, lerp 0.065
+   ‚úÖ FIX 2 ‚Äî 3D perspective tilt on hero copy (¬±2.8¬∞/2.2¬∞)
+   ‚úÖ FIX 3 ‚Äî Blue-gray overlay rgba(237,242,245,0.65)
+   ‚úÖ FIX 4 ‚Äî Overlay opacity 0.65, images breathe
+
+   STOLEN FROM YOUR v2 (upgrades 5-9):
+   ‚úÖ UP  5 ‚Äî Masked curtain word reveal: translateY(110%) inside
+              overflow:hidden wrapper ‚Äî the Vogue/Herm√®s technique
+   ‚úÖ UP  6 ‚Äî Ken Burns image drift in CSS @keyframes kenBurns
+   ‚úÖ UP  7 ‚Äî Full-width progress bar, resets every slide
+   ‚úÖ UP  8 ‚Äî Letter spacing -0.075em, 9rem ceiling
+   ‚úÖ UP  9 ‚Äî Staggered cascade: title +120ms, body +220ms
+   ============================================================ */
+
+(function () {
+  'use strict';
+
+  if (!document.getElementById('hero')) return;
+
+  /* ========================================
+     SLIDE DATA
+  ???????????????????????????????????????? */
+  var slides = [
+    {
+      word:    'Breathe',
+      eyebrow: 'Aroma Rituals',
+      title:   'Wellness technology for a softer, calmer home.',
+      body:    'Diffusers and scent rituals designed to turn everyday space into an atmosphere of ease, quiet, and restoration.',
+      image:   'images/DIFFUSER.jpg',
+      duration: 3800
+    },
+    {
+      word:    'Restore',
+      eyebrow: 'Facial Rejuvenation',
+      title:   'Beauty tools that make care feel intentional.',
+      body:    'Facial devices inspired by modern beauty rituals and time-honored techniques‚Äîcrafted to support a more radiant-looking routine.',
+      image:   'images/FACE-DEVICES-2.jpg',
+      duration: 3800
+    },
+    {
+      word:    'Reflect',
+      eyebrow: 'Mirrors',
+      title:   'Light, clarity, and a more elevated getting-ready ritual.',
+      body:    'Thoughtfully designed mirrors that bring precision, glow, and calm to the moments where beauty begins.',
+      image:   'images/MIRRORS.jpg',
+      duration: 3800
+    },
+    {
+      word:    'Unwind',
+      eyebrow: 'Sleep & Sound',
+      title:   'A gentler rhythm for rest, recovery, and reset.',
+      body:    'Sleep machines and sound-led rituals that help transform the end of the day into something more grounding and restorative.',
+      image:   'images/SOUND-MACHINE.jpg',
+      duration: 3800
+    },
+    {
+      word:    'Move',
+      eyebrow: 'Yoga & Recovery',
+      title:   'Balance in motion, strength in ritual.',
+      body:    'Yoga wheels and movement essentials designed to support flexibility, release, alignment, and a more centered daily practice.',
+      image:   'images/yoga-wheel.jpg',
+      duration: 3800
+    },
+    {
+      word:    'Reveal',
+      eyebrow: 'Beauty Devices',
+      title:   'Smooth, sculpted, travel-ready essentials.',
+      body:    'From grooming tools to skincare companions‚Äîrefined, effortless, beautifully considered.',
+      image:   'images/FACE-DEVICES.jpg',
+      duration: 3800
+    },
+    {
+      word:    'Balance',
+      eyebrow: 'Harmony & Balance',
+      title:   'Wellness and beauty for a more harmonious way of life.',
+      body:    'A design-forward world of rituals across beauty, sleep, movement, and atmosphere‚Äîcreated to help you feel restored, confident, and radiant.',
+      image:   null,
+      duration: 10000,
+      isFinal: true
+    }
+  ];
+
+  /* ========================================
+     DOM REFS
+  ???????????????????????????????????????? */
+  var hero             = document.getElementById('hero');
+  var heroBg           = document.getElementById('hero-bg');
+  var heroFinalBg      = document.getElementById('hero-final-bg');   /* image fallback */
+  var heroBottom       = document.getElementById('hero-bottom');      /* dots + progress bar */
+  var heroVideoWrap    = document.getElementById('hero-video-wrap');
+  var heroVideo        = document.getElementById('hero-video');
+  var overlayRadial    = document.getElementById('hero-overlay-radial');
+  var overlayBottom    = document.getElementById('hero-overlay-bottom');
+  var heroContent      = document.getElementById('hero-content');
+  var heroContentInner = document.getElementById('hero-content-inner');
+  var finalSlide       = document.getElementById('final-slide');
+  var slideEyebrow     = document.getElementById('slide-eyebrow');
+  var slideWord        = document.getElementById('slide-word');
+  var slideTitle       = document.getElementById('slide-title');
+  var slideBody        = document.getElementById('slide-body');
+  var dotsEl           = document.getElementById('dots');
+  var dotsFinalEl      = document.getElementById('dots-final');
+  var slideProgBar     = document.getElementById('slide-progress-bar');  /* UP 7 */
+  var finalDivider     = document.getElementById('final-divider');
+  var finalTagline     = document.getElementById('final-tagline');
+  var finalBodyEl      = document.getElementById('final-body');
+  var finalProgWrap    = document.getElementById('final-progress-wrap');
+  var finalProgBar     = document.getElementById('final-progress-bar');
+  var header           = document.getElementById('site-header');
+  var orb              = document.getElementById('mouse-light');
+  var cursorDot        = document.getElementById('cursor-dot');
+
+  /* ========================================
+     1. MOUSE-LIGHT ORB [FIX 1]
+     Lerp-eased 720px soft silk-trailing orb.
+  ???????????????????????????????????????? */
+  var orbX  = window.innerWidth  / 2;
+  var orbY  = window.innerHeight / 2;
+  var targX = orbX;
+  var targY = orbY;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function orbTick() {
+    orbX = lerp(orbX, targX, 0.065);
+    orbY = lerp(orbY, targY, 0.065);
+    if (hero && orb) {
+      var rect = hero.getBoundingClientRect();
+      orb.style.left = (orbX - rect.left) + 'px';
+      orb.style.top  = (orbY - rect.top)  + 'px';
+    }
+    requestAnimationFrame(orbTick);
+  }
+
+  /* ========================================
+     2. 3D TEXT TILT [FIX 2]
+     perspective(1400px) rotateX/Y on hero copy.
+     Max =2.8= Y, =2.2= X. Off on final slide.
+  ???????????????????????????????????????? */
+  var tiltActive = true;
+
+  function applyTilt(cx, cy) {
+    if (!heroContentInner || !tiltActive) return;
+    var r  = hero.getBoundingClientRect();
+    var xP = ((cx - r.left) / r.width)  * 100;
+    var yP = ((cy - r.top)  / r.height) * 100;
+    heroContentInner.style.transform =
+      'perspective(1400px) rotateX(' + (((50 - yP) / 50) * 2.2) + 'deg) ' +
+      'rotateY(' + (((xP - 50) / 50) * 2.8) + 'deg)';
+    heroContentInner.style.transition = 'transform 0.08s linear';
+  }
+
+  function resetTilt() {
+    if (!heroContentInner) return;
+    heroContentInner.style.transform  = 'perspective(1400px) rotateX(0deg) rotateY(0deg)';
+    heroContentInner.style.transition = 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
+  }
+
+  /* ?? Shared mousemove: orb + tilt + cursor dot ?? */
+  document.addEventListener('mousemove', function (e) {
+    targX = e.clientX;
+    targY = e.clientY;
+    if (cursorDot) {
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top  = e.clientY + 'px';
+    }
+    if (hero) {
+      var r = hero.getBoundingClientRect();
+      var inside = e.clientX >= r.left && e.clientX <= r.right &&
+                   e.clientY >= r.top  && e.clientY <= r.bottom;
+      if (inside && tiltActive) applyTilt(e.clientX, e.clientY);
+    }
+  });
+
+  if (hero && orb) {
+    hero.addEventListener('mouseenter', function () {
+      if (cursorDot) cursorDot.style.opacity = '1';
+    });
+    hero.addEventListener('mouseleave', function () {
+      if (cursorDot) cursorDot.style.opacity = '0';
+      resetTilt();
+    });
+    orbTick();
+  }
+
+  function dimOrb()   { if (orb) orb.classList.add('dim-orb'); }
+  function undimOrb() { if (orb) orb.classList.remove('dim-orb'); }
+
+  /* ========================================
+     3. UP 7 = FULL-WIDTH SLIDE PROGRESS BAR
+     Resets per slide using DOM reflow trick
+     (void offsetWidth forces repaint).
+  ???????????????????????????????????????? */
+  function resetSlideProgress(duration) {
+    if (!slideProgBar) return;
+    /* remove class ? force reflow ? re-add with correct duration */
+    slideProgBar.classList.remove('animate');
+    slideProgBar.style.setProperty('--slide-dur', duration + 'ms');
+    /* also set on the parent so CSS @keyframes picks it up */
+    var prog = document.getElementById('slide-progress');
+    if (prog) prog.style.setProperty('--slide-dur', duration + 'ms');
+    void slideProgBar.offsetWidth;           /* DOM reflow trigger */
+    slideProgBar.classList.add('animate');
+  }
+
+  function hideSlideProgress() {
+    if (slideProgBar) {
+      slideProgBar.classList.remove('animate');
+      slideProgBar.style.width = '0%';
+    }
+  }
+
+  /* ========================================
+     4. HEADLINE LETTER REVEAL (final slide)
+  ???????????????????????????????????????? */
+  var finalHeadline = document.getElementById('final-headline');
+  var letterSpans   = [];
+
+  if (finalHeadline) {
+    var text   = 'Harmony & Balance';
+    var chars  = text.split('');
+    var ampIdx = chars.indexOf('&');
+
+    chars.forEach(function (ch) {
+      var span = document.createElement('span');
+      span.classList.add('hl');
+      if (ch === ' ') {
+        span.classList.add('space');
+        span.innerHTML = '&nbsp;';
+      } else if (ch === '&') {
+        span.classList.add('ampersand');
+        span.textContent = ch;
+      } else {
+        span.textContent = ch;
+      }
+      finalHeadline.appendChild(span);
+      letterSpans.push(span);
+    });
+
+    letterSpans.forEach(function (span, i) {
+      span._delay = 500 + Math.abs(i - ampIdx) * 80;
+    });
+  }
+
+  function revealHeadline() {
+    letterSpans.forEach(function (span) {
+      setTimeout(function () { span.classList.add('revealed'); }, span._delay);
+    });
+  }
+  function resetHeadline() {
+    letterSpans.forEach(function (span) { span.classList.remove('revealed'); });
+  }
+
+  /* ========================================
+     5. DOTS
+  ???????????????????????????????????????? */
+  function buildDots(container) {
+    if (!container) return;
+    slides.forEach(function (s, i) {
+      var btn = document.createElement('button');
+      btn.className = 'dot-btn' + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', 'Go to ' + s.word);
+      btn.addEventListener('click', function () { goTo(i); });
+      container.appendChild(btn);
+    });
+  }
+  buildDots(dotsEl);
+  buildDots(dotsFinalEl);
+
+  function updateDots(idx) {
+    document.querySelectorAll('.dot-btn').forEach(function (d, i) {
+      d.classList.toggle('active', i % slides.length === idx);
+    });
+  }
+
+  /* ========================================
+     6. SLIDE TEXT = UP 5 + UP 9
+     Using class-state system (not inline
+     style overrides) for clean transitions.
+     Hero-content-inner gets:
+       .slide-copy-visible  ? everything cascades in
+       .slide-copy-exiting  ? word flies up, rest fades
+  ???????????????????????????????????????? */
+  var copyWrap = heroContentInner; /* same element as tilt target */
+
+  function showCopy()  {
+    if (!copyWrap) return;
+    copyWrap.classList.remove('slide-copy-exiting');
+    copyWrap.classList.add('slide-copy-visible');
+  }
+  function hideCopy()  {
+    if (!copyWrap) return;
+    copyWrap.classList.remove('slide-copy-visible');
+    copyWrap.classList.add('slide-copy-exiting');
+  }
+  function resetCopy() {
+    if (!copyWrap) return;
+    copyWrap.classList.remove('slide-copy-visible', 'slide-copy-exiting');
+  }
+
+  /* ========================================
+     7. FINAL SLIDE ENTER / EXIT
+  ???????????????????????????????????????? */
+  function resetFinal() {
+    if (finalSlide)    finalSlide.classList.remove('shown');
+    if (finalDivider)  finalDivider.classList.remove('in');
+    if (finalTagline)  finalTagline.classList.remove('in');
+    if (finalBodyEl)   finalBodyEl.classList.remove('in');
+    if (finalProgWrap) finalProgWrap.classList.remove('visible');
+    if (finalProgBar) {
+      finalProgBar.style.transition = 'none';
+      finalProgBar.style.width = '0%';
+    }
+    resetHeadline();
+  }
+
+  function animateFinal(duration) {
+    requestAnimationFrame(function () {
+      if (finalSlide)   finalSlide.classList.add('shown');
+      revealHeadline();
+      if (finalDivider) finalDivider.classList.add('in');
+      if (finalTagline) finalTagline.classList.add('in');
+      if (finalBodyEl)  finalBodyEl.classList.add('in');
+      setTimeout(function () {
+        if (finalProgWrap) finalProgWrap.classList.add('visible');
+        var remaining = duration - 4000;
+        if (finalProgBar) {
+          finalProgBar.style.transition = 'width ' + remaining + 'ms linear';
+          requestAnimationFrame(function () { finalProgBar.style.width = '100%'; });
+        }
+      }, 4000);
+    });
+  }
+
+  function enterFinalMode() {
+    tiltActive = false;
+    resetTilt();
+    hideSlideProgress();
+    if (overlayRadial) overlayRadial.classList.add('dim');
+    if (overlayBottom) overlayBottom.classList.add('dim');
+    if (header)        header.classList.add('is-dark');
+    /* Hide the standard dots + progress bar ‚Äî final slide has its own */
+    if (heroBottom)    heroBottom.style.display = 'none';
+    /* Activate image fallback FIRST ‚Äî video fades in on top of it */
+    if (heroFinalBg)   heroFinalBg.classList.add('active');
+    if (heroVideoWrap) heroVideoWrap.classList.add('active');
+    if (heroVideo)     heroVideo.play().catch(function () {});
+    if (dotsEl)        dotsEl.classList.add('dots-light');
+    if (dotsFinalEl)   dotsFinalEl.classList.add('dots-light');
+    if (heroContent)   heroContent.style.display = 'none';
+    /* final-slide is now position:absolute ‚Äî just make it visible */
+    if (finalSlide) {
+      finalSlide.classList.add('visible');
+    }
+    dimOrb();
+    animateFinal(slides[slides.length - 1].duration);
+  }
+
+  function exitFinalMode() {
+    tiltActive = true;
+    if (overlayRadial) overlayRadial.classList.remove('dim');
+    if (overlayBottom) overlayBottom.classList.remove('dim');
+    if (header)        header.classList.remove('is-dark');
+    if (heroFinalBg)   heroFinalBg.classList.remove('active');
+    if (heroVideoWrap) heroVideoWrap.classList.remove('active');
+    /* Restore the standard dots + progress bar */
+    if (heroBottom)    heroBottom.style.display = '';
+    if (dotsEl)        dotsEl.classList.remove('dots-light');
+    if (dotsFinalEl)   dotsFinalEl.classList.remove('dots-light');
+    if (heroContent)   heroContent.style.display = '';
+    if (finalSlide)    finalSlide.classList.remove('visible');
+    undimOrb();
+    resetFinal();
+  }
+
+  /* ========================================
+     8. STANDARD SLIDE = full animation sequence
+     FIX 3+4: blue-gray overlay 0.65
+     UP 5:    curtain word reveal via class states
+     UP 7:    progress bar reset per slide
+  ???????????????????????????????????????? */
+  function setStandardSlide(idx, animate) {
+    var s = slides[idx];
+    if (!s) return;
+
+    /* = Image transition = */
+    if (heroBg) {
+      heroBg.classList.add('exiting');
+      heroBg.classList.remove('hidden');
+      setTimeout(function () {
+        heroBg.style.backgroundImage =
+          'linear-gradient(to top, rgba(237,242,245,0.65), rgba(237,242,245,0.08)), url(' + s.image + ')';
+        heroBg.classList.remove('exiting');
+        heroBg.classList.add('active');
+      }, animate ? 380 : 0);
+    }
+
+    /* = Text exit ? content swap ? text enter = */
+    if (animate) {
+      hideCopy();
+      setTimeout(function () {
+        if (slideEyebrow) slideEyebrow.textContent = s.eyebrow;
+        if (slideWord)    slideWord.textContent    = s.word;
+        if (slideTitle)   slideTitle.textContent   = s.title;
+        if (slideBody)    slideBody.textContent    = s.body;
+        resetCopy();
+        /* micro-tick so reset state is painted before visible */
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            showCopy();
+            setTimeout(function () { transitioning = false; }, 950);
+          });
+        });
+      }, 300);
+    } else {
+      /* init: no animation, just set content + show */
+      if (slideEyebrow) slideEyebrow.textContent = s.eyebrow;
+      if (slideWord)    slideWord.textContent    = s.word;
+      if (slideTitle)   slideTitle.textContent   = s.title;
+      if (slideBody)    slideBody.textContent    = s.body;
+      resetCopy();
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { showCopy(); });
+      });
+    }
+
+    /* = UP 7: reset progress bar for this slide = */
+    resetSlideProgress(s.duration);
+  }
+
+  /* ========================================
+     9. CORE goTo
+  ???????????????????????????????????????? */
+  var current       = 0;
+  var transitioning = false;
+  var timer         = null;
+
+  function goTo(idx, animate) {
+    if (animate === undefined) animate = true;
+    if (transitioning && animate) return;
+    transitioning = true;
+
+    var prev      = current;
+    current       = idx;
+    var slide     = slides[idx];
+    var prevFinal = slides[prev] && slides[prev].isFinal;
+    var nextFinal = slide.isFinal;
+
+    updateDots(idx);
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      transitioning = false;
+      goTo((current + 1) % slides.length);
+    }, slide.duration);
+
+    if (nextFinal) {
+      if (heroBg) heroBg.classList.add('hidden');
+      setTimeout(function () { enterFinalMode(); }, 200);
+      setTimeout(function () { transitioning = false; }, 1600);
+    } else {
+      if (prevFinal) exitFinalMode();
+      setStandardSlide(idx, animate);
+    }
+  }
+
+  /* ========================================
+     10. INIT
+  ???????????????????????????????????????? */
+  (function init() {
+    var first = slides[0];
+    if (heroBg) {
+      heroBg.style.backgroundImage =
+        'linear-gradient(to top, rgba(237,242,245,0.65), rgba(237,242,245,0.08)), url(' + first.image + ')';
+      heroBg.classList.add('active');
+    }
+    setStandardSlide(0, false);
+
+    timer = setTimeout(function () {
+      transitioning = false;
+      goTo(1);
+    }, first.duration);
+  })();
+
+})();
+
