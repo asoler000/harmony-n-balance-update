@@ -695,3 +695,70 @@
     padding: calc(var(--header-h) + 2rem) var(--space-4) calc(var(--space-16));
   }
 }
+
+
+/* ─── OUR WELLNESS PHILOSOPHY ───────────────────────────────── */
+.philosophy {
+  background: var(--surface-2, #f7f5f2);
+  padding: var(--space-20, 5rem) 0;
+}
+.philosophy__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.philosophy__inner .eyebrow {
+  display: block;
+  margin-bottom: var(--space-4, 1rem);
+}
+.philosophy__inner h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-10, 2.5rem);
+}
+.philosophy__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8, 2rem);
+  text-align: left;
+  margin-bottom: var(--space-12, 3rem);
+}
+@media (max-width: 640px) {
+  .philosophy__columns { grid-template-columns: 1fr; }
+}
+.philosophy__col p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary, #555);
+}
+.philosophy__principles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6, 1.5rem);
+  border-top: 1px solid var(--border, #e5e5e3);
+  padding-top: var(--space-10, 2.5rem);
+}
+@media (max-width: 900px) {
+  .philosophy__principles { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .philosophy__principles { grid-template-columns: 1fr; }
+}
+.principle {
+  text-align: left;
+}
+.principle__number {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--accent, #a8925a);
+  margin-bottom: var(--space-2, 0.5rem);
+  font-weight: 600;
+}
+.principle__text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text, #1a1a1a);
+  margin: 0;
+}
+/* ─────────────────────────────────────────────────────────── */
