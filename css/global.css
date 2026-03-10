@@ -1,0 +1,473 @@
+/* ============================================================
+   HARMONY & BALANCE — global.css
+   Global reset, CSS variables, typography, utility classes,
+   shared UI components (buttons, cards, badges, grid helpers).
+   All other stylesheets import or layer on top of this file.
+   ============================================================ */
+
+
+/* ── 1. CSS Custom Properties (Design Tokens) ─────────────── */
+:root {
+
+  /* Brand palette */
+  --cream:        #edf2f5;
+  --cream-dark:   #dde5eb;
+  --white:        #ffffff;
+  --dark:         #3f4852;
+  --dark-2:       #2f3841;
+  --mid:          #67717b;
+  --light:        #7a848f;
+  --muted:        #9aa3ad;
+  --gold:         #b89a77;
+  --gold-dark:    #8c765f;
+  --gold-light:   #d6c1aa;
+  --gold-ultra:   #ede0ce;
+
+  /* Semantic */
+  --bg:           var(--cream);
+  --text-primary: var(--dark);
+  --text-mid:     var(--mid);
+  --text-muted:   var(--muted);
+  --border:       rgba(0,0,0,0.07);
+  --border-light: rgba(255,255,255,0.6);
+  --shadow-sm:    0 4px 20px rgba(100,115,130,0.10);
+  --shadow-md:    0 16px 48px rgba(100,115,130,0.14);
+  --shadow-lg:    0 30px 80px rgba(100,115,130,0.16);
+
+  /* Typography */
+  --font:         'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --size-xs:      0.75rem;      /* 12px */
+  --size-sm:      0.875rem;     /* 14px */
+  --size-base:    1rem;         /* 16px */
+  --size-md:      1.125rem;     /* 18px */
+  --size-lg:      1.375rem;     /* 22px */
+  --size-xl:      1.75rem;      /* 28px */
+  --size-2xl:     2.25rem;      /* 36px */
+  --size-3xl:     3rem;         /* 48px */
+  --size-4xl:     4rem;         /* 64px */
+  --size-hero:    clamp(3.5rem, 10vw, 9rem);
+
+  /* Eyebrow / tracking */
+  --track-wide:   0.30em;
+  --track-wider:  0.38em;
+
+  /* Spacing scale */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radii */
+  --radius-sm:   0.5rem;
+  --radius-md:   1rem;
+  --radius-lg:   2rem;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --ease:       cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 0.3s var(--ease);
+
+  /* Layout */
+  --max-w:      1280px;
+  --header-h:   72px;
+}
+
+
+/* ── 2. Reset ──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol { list-style: none; }
+
+input, textarea, select {
+  font-family: var(--font);
+  font-size: var(--size-base);
+}
+
+/* ── 3. Typography ─────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(var(--size-3xl), 6vw, var(--size-4xl)); }
+h2 { font-size: clamp(var(--size-2xl), 5vw, var(--size-3xl)); }
+h3 { font-size: clamp(var(--size-xl),  3.5vw, var(--size-2xl)); }
+h4 { font-size: clamp(var(--size-lg),  2.5vw, var(--size-xl)); }
+h5 { font-size: var(--size-md); }
+h6 { font-size: var(--size-base); }
+
+p {
+  font-size: clamp(var(--size-sm), 1.4vw, var(--size-md));
+  line-height: 1.9;
+  color: var(--text-mid);
+}
+
+/* Eyebrow label style */
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--track-wider);
+  color: var(--gold-dark);
+  margin-bottom: var(--space-4);
+}
+
+.eyebrow--light { color: rgba(255,255,255,0.6); }
+.eyebrow--muted { color: var(--muted); }
+
+/* ── 4. Layout helpers ─────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.section {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+}
+
+.section--sm {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+/* 2-column auto grid */
+.grid-2 {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px)  { .grid-2  { grid-template-columns: 1fr 1fr; } }
+
+/* 3-column auto grid */
+.grid-3 {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px)  { .grid-3  { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .grid-3  { grid-template-columns: 1fr 1fr 1fr; } }
+
+/* 4-column auto grid */
+.grid-4 {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 1024px) { .grid-4  { grid-template-columns: repeat(4, 1fr); } }
+
+/* Flex helpers */
+.flex         { display: flex; }
+.flex-center  { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-col     { display: flex; flex-direction: column; }
+.gap-4        { gap: var(--space-4); }
+.gap-6        { gap: var(--space-6); }
+
+/* ── 5. Buttons ────────────────────────────────────────────── */
+
+/* Primary dark */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 26px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.15s;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn--dark {
+  background: var(--dark);
+  color: var(--white);
+  border: 1px solid transparent;
+}
+.btn--dark:hover { background: var(--dark-2); }
+
+.btn--gold {
+  background: var(--gold);
+  color: var(--white);
+  border: 1px solid transparent;
+}
+.btn--gold:hover { background: var(--gold-dark); }
+
+.btn--outline {
+  background: transparent;
+  color: var(--gold-dark);
+  border: 1px solid var(--gold-light);
+}
+.btn--outline:hover { background: rgba(255,255,255,0.7); }
+
+.btn--glass {
+  background: rgba(255,255,255,0.5);
+  color: #4d5661;
+  border: 1px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.btn--glass:hover { background: rgba(255,255,255,0.8); }
+
+.btn--ghost-light {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+.btn--ghost-light:hover { background: rgba(255,255,255,0.22); }
+
+/* Button row */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+/* ── 6. Cards ──────────────────────────────────────────────── */
+.card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card--glass {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card--warm {
+  background: #f7f2ec;
+  box-shadow: var(--shadow-md);
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__image--square { aspect-ratio: 1; }
+.card__image--wide   { aspect-ratio: 16/9; }
+
+.card__body {
+  padding: var(--space-8);
+}
+
+.card__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--gold-dark);
+  margin-bottom: var(--space-3);
+}
+
+.card__title {
+  font-size: var(--size-lg);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--dark);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+.card__text {
+  font-size: var(--size-sm);
+  line-height: 1.85;
+  color: var(--mid);
+}
+
+.card__footer {
+  padding: var(--space-4) var(--space-8) var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── 7. Section header pattern ─────────────────────────────── */
+.section-header {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto var(--space-16);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-5);
+}
+
+.section-header p {
+  font-size: clamp(var(--size-base), 1.6vw, var(--size-md));
+  color: var(--mid);
+}
+
+/* ── 8. Divider / rule ─────────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: var(--space-6) auto;
+}
+
+.divider--left { margin-left: 0; }
+
+/* ── 9. Badge / tag ────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-weight: 400;
+}
+
+.badge--gold  { background: var(--gold-ultra); color: var(--gold-dark); }
+.badge--dark  { background: var(--dark);       color: var(--white); }
+.badge--light { background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.85); }
+
+/* ── 10. Page hero banner (for inner pages) ────────────────── */
+.page-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: linear-gradient(135deg, #c8d4dd, #dde5eb, #edf2f5);
+  padding-top: var(--header-h);
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+  filter: saturate(0.7) brightness(0.85);
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(237,242,245,0.96) 0%,
+    rgba(237,242,245,0.40) 50%,
+    rgba(237,242,245,0.10) 100%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6);
+}
+
+/* ── 11. Scroll fade-in animation ──────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal--delay-1 { transition-delay: 0.12s; }
+.reveal--delay-2 { transition-delay: 0.24s; }
+.reveal--delay-3 { transition-delay: 0.36s; }
+.reveal--delay-4 { transition-delay: 0.48s; }
+
+/* ── 12. Utility classes ───────────────────────────────────── */
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-white   { color: var(--white); }
+.text-gold    { color: var(--gold); }
+.text-muted   { color: var(--muted); }
+
+.mt-4  { margin-top: var(--space-4); }
+.mt-6  { margin-top: var(--space-6); }
+.mt-8  { margin-top: var(--space-8); }
+.mt-12 { margin-top: var(--space-12); }
+.mb-4  { margin-bottom: var(--space-4); }
+.mb-6  { margin-bottom: var(--space-6); }
+.mb-8  { margin-bottom: var(--space-8); }
+
+.hidden { display: none !important; }
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,425 @@
+/* ============================================================
+   HARMONY & BALANCE — header.css
+   Sticky site header: logo, desktop nav with dropdowns,
+   mobile hamburger menu, scroll-state transparency.
+   ============================================================ */
+
+/* ── Header shell ──────────────────────────────────────────── */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  transition:
+    background   0.5s var(--ease),
+    box-shadow   0.5s var(--ease),
+    backdrop-filter 0.5s;
+}
+
+/* Transparent state — on top of hero */
+#site-header.is-top {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Scrolled state — frosted glass */
+#site-header.is-scrolled {
+  background: rgba(237, 242, 245, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 8px 32px rgba(100,115,130,0.08);
+}
+
+/* Dark video slide override — stay light text */
+#site-header.is-dark {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ── Gold accent line under header — static ─────────────────── */
+/* Thin 1px gold line. Fades to transparent at edges.
+   No animation. Brand asset, not a feature. Still, structural, refined. */
+#site-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent  0%,
+    #b89a77     12%,
+    #d4aa6b     35%,
+    #e8c97e     50%,
+    #d4aa6b     65%,
+    #b89a77     88%,
+    transparent 100%
+  );
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
+  /* No animation — static structural element */
+}
+
+/* Slightly more visible on dark/final slide */
+#site-header.is-dark::after {
+  opacity: 1;
+}
+
+
+/* ── Header inner layout ───────────────────────────────────── */
+.header__inner {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+/* ── Logo ──────────────────────────────────────────────────── */
+.header__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Logo: static warm gold text ────────────────────────────── */
+/* Static gold — no animation. The hero moves plenty already.
+   A multi-stop gradient gives subtle dimensional depth (lighter center,
+   deeper at edges) — exactly how foil ink reads on packaging at rest.
+   No shimmer, no sweep. Confident. Expensive. Still.              */
+.logo-text {
+  font-family: var(--font, 'Montserrat', sans-serif);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: block;
+
+  /* Static foil-depth gradient: warm amber edges, champagne highlight centre */
+  background: linear-gradient(
+    105deg,
+    #8c6a35  0%,
+    #c9a96e  30%,
+    #e8c97e  50%,
+    #c9a96e  70%,
+    #8c6a35  100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* No animation — intentionally calm */
+}
+
+/* On dark / video final slide — slightly brighter so it reads against black */
+#site-header.is-dark .logo-text {
+  background: linear-gradient(
+    105deg,
+    #a07840  0%,
+    #d4aa6b  30%,
+    #f0d080  50%,
+    #d4aa6b  70%,
+    #a07840  100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Footer logo — same static treatment */
+.footer__logo-text {
+  font-family: var(--font, 'Montserrat', sans-serif);
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  background: linear-gradient(
+    105deg,
+    #8c6a35 0%, #c9a96e 30%, #e8c97e 50%, #c9a96e 70%, #8c6a35 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ── Desktop navigation ────────────────────────────────────── */
+.header__nav {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-weight: 400;
+  color: var(--dark);
+  border-radius: var(--radius-full);
+  transition: color var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.nav__link:hover {
+  color: var(--gold-dark);
+  background: rgba(184,154,119,0.08);
+}
+
+.nav__link.is-active {
+  color: var(--gold-dark);
+}
+
+/* Caret icon for dropdown triggers */
+.nav__caret {
+  width: 10px;
+  height: 10px;
+  transition: transform 0.3s;
+}
+.nav__item:hover .nav__caret,
+.nav__item.is-open .nav__caret {
+  transform: rotate(180deg);
+}
+
+/* Light nav on dark bg */
+#site-header.is-dark .nav__link { color: rgba(255,255,255,0.85); }
+#site-header.is-dark .nav__link:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.10);
+}
+
+/* ── Dropdown panel ────────────────────────────────────────── */
+.nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 200px;
+  background: rgba(237,242,245,0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5) var(--space-2) var(--space-3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.nav__item:hover .nav__dropdown,
+.nav__item.is-open .nav__dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav__dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--dark);
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav__dropdown-link:hover {
+  background: rgba(184,154,119,0.10);
+  color: var(--gold-dark);
+}
+
+.nav__dropdown-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--gold-ultra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+/* ── Header CTA area ───────────────────────────────────────── */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.header__actions .btn {
+  padding: 9px 18px;
+  font-size: 10px;
+}
+
+/* Hide CTA on small screens */
+.header__actions .btn--dark {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header__actions .btn--dark {
+    display: inline-flex;
+  }
+}
+
+/* ── Hamburger button (mobile) ─────────────────────────────── */
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.header__hamburger:hover { background: rgba(0,0,0,0.05); }
+
+@media (min-width: 1024px) {
+  .header__hamburger { display: none; }
+}
+
+.hamburger__bar {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: transform 0.35s var(--ease), opacity 0.25s, width 0.3s;
+  transform-origin: center;
+}
+
+/* Light bars on dark bg */
+#site-header.is-dark .hamburger__bar { background: rgba(255,255,255,0.9); }
+
+/* Open state: animate to × */
+.header__hamburger.is-open .hamburger__bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.header__hamburger.is-open .hamburger__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.header__hamburger.is-open .hamburger__bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ── Mobile menu panel ─────────────────────────────────────── */
+#mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  background: rgba(237,242,245,0.97);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  padding: calc(var(--header-h) + var(--space-8)) var(--space-6) var(--space-8);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-16px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+#mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.mobile-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-3);
+  font-size: var(--size-lg);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--dark);
+  border-bottom: 1px solid var(--border);
+  transition: color var(--transition);
+}
+
+.mobile-nav__link:hover { color: var(--gold-dark); }
+
+.mobile-nav__sub {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2) 0 var(--space-4) var(--space-4);
+  gap: var(--space-2);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s var(--ease);
+}
+
+.mobile-nav__sub.is-open { max-height: 400px; }
+
+.mobile-nav__sub-link {
+  font-size: var(--size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--mid);
+  padding: var(--space-2) 0;
+  transition: color var(--transition);
+}
+.mobile-nav__sub-link:hover { color: var(--gold-dark); }
+
+.mobile-nav__footer {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ── Scroll progress bar (ultra-thin gold line at top) ─────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(to right, var(--gold-light), var(--gold), var(--gold-dark));
+  z-index: 1001;
+  transition: width 0.1s linear;
+}

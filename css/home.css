@@ -1,0 +1,355 @@
+/* ============================================================
+   HARMONY & BALANCE — home.css
+   Homepage-specific sections below the hero:
+   Brand story, category showcase grid, featured product
+   strip, brand pillars, and the main CTA block.
+   ============================================================ */
+
+/* ── Brand Story section ───────────────────────────────────── */
+.brand-story {
+  background: var(--white);
+}
+
+.brand-story__grid {
+  display: grid;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .brand-story__grid { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+.brand-story__text .eyebrow { margin-bottom: var(--space-5); }
+
+.brand-story__text h2 {
+  margin-bottom: var(--space-6);
+}
+
+.brand-story__text p + p { margin-top: var(--space-5); }
+
+/* Glass quadrant card */
+.brand-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.pillar {
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.pillar:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.pillar__icon {
+  font-size: 22px;
+  margin-bottom: var(--space-3);
+}
+
+.pillar__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  color: var(--gold-dark);
+  margin-bottom: var(--space-2);
+}
+
+.pillar__text {
+  font-size: var(--size-xs);
+  line-height: 1.75;
+  color: var(--mid);
+}
+
+/* ── Category Showcase ─────────────────────────────────────── */
+.categories {
+  background: var(--cream);
+}
+
+.categories__grid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .categories__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .categories__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Category card */
+.cat-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c8d4dd, #dde5eb);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.cat-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+}
+
+.cat-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s var(--ease);
+}
+
+.cat-card:hover .cat-card__image {
+  transform: scale(1.06);
+}
+
+.cat-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(40,48,56,0.78) 0%,
+    rgba(40,48,56,0.18) 55%,
+    transparent 100%
+  );
+  transition: opacity var(--transition);
+}
+
+.cat-card:hover .cat-card__overlay {
+  opacity: 0.85;
+}
+
+.cat-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-6);
+}
+
+.cat-card__eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+  margin-bottom: var(--space-2);
+}
+
+.cat-card__title {
+  font-size: var(--size-xl);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: var(--space-3);
+}
+
+.cat-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  color: rgba(255,255,255,0.7);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), color 0.2s;
+}
+
+.cat-card:hover .cat-card__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cat-card__link:hover { color: var(--gold); }
+
+/* ── Featured banner (full-width product strip) ────────────── */
+.featured-banner {
+  background: var(--dark-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.20;
+  filter: saturate(0.5);
+}
+
+.featured-banner__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .featured-banner__inner {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+}
+
+.featured-banner__copy { flex: 1; }
+
+.featured-banner__eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--track-wider);
+  color: var(--gold);
+  margin-bottom: var(--space-5);
+}
+
+.featured-banner__heading {
+  font-size: clamp(var(--size-2xl), 4vw, var(--size-3xl));
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: var(--space-5);
+}
+
+.featured-banner__body {
+  color: rgba(255,255,255,0.68);
+  max-width: 36rem;
+}
+
+.featured-banner__image {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.35);
+}
+
+/* ── Brand Values strip ────────────────────────────────────── */
+.brand-values {
+  background: var(--cream-dark);
+}
+
+.brand-values__grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+@media (min-width: 640px)  { .brand-values__grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .brand-values__grid { grid-template-columns: repeat(4, 1fr); } }
+
+.value-item {}
+
+.value-item__number {
+  font-size: clamp(var(--size-3xl), 5vw, 4.5rem);
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: var(--space-3);
+}
+
+.value-item__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--dark);
+  margin-bottom: var(--space-3);
+}
+
+.value-item__text {
+  font-size: var(--size-xs);
+  line-height: 1.75;
+  color: var(--mid);
+}
+
+/* ── Home CTA block ────────────────────────────────────────── */
+.home-cta {
+  background: var(--white);
+}
+
+.home-cta__grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (min-width: 1024px) {
+  .home-cta__grid { grid-template-columns: 1.15fr 0.85fr; }
+}
+
+.home-cta__card {
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #f3ede5, #f7f2ec);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-12) var(--space-10);
+}
+
+.home-cta__card h3 {
+  margin: var(--space-4) 0;
+}
+
+.home-cta__card p {
+  max-width: 40rem;
+}
+
+.contact-glass {
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--size-sm);
+  color: #4f5863;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-detail:last-child { border-bottom: none; }
+
+.contact-detail__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--gold-ultra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold-dark);
+}
