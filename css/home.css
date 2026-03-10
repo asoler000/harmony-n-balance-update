@@ -85,8 +85,15 @@
   .categories__grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (min-width: 1024px) {
-  .categories__grid { grid-template-columns: repeat(4, 1fr); }
+@media (min-width: 900px) {
+  .categories__grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* 5-col: portrait cards become taller strips — trim to 4:5 so they fit elegantly */
+@media (min-width: 900px) {
+  .categories__grid .cat-card {
+    aspect-ratio: 2 / 3;
+  }
 }
 
 /* Category card */
@@ -261,7 +268,7 @@
 }
 
 @media (min-width: 640px)  { .brand-values__grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1024px) { .brand-values__grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .brand-values__grid { grid-template-columns: repeat(5, 1fr); } }
 
 .value-item {}
 
