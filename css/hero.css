@@ -110,7 +110,7 @@
   100% { transform: scale(1.08) translate3d( 0.8%, -0.5%, 0); }
 }
 
-/* ── Final slide IMAGE fallback [brand-ethos.png + cinematic zoom] ──
+/* ── Final slide IMAGE fallback [brand-ethos.jpg + cinematic zoom] ──
    Always sits beneath the video layer.
    • When video plays  → video fades in on top, image hidden beneath
    • When video blocked (iOS Low Power, no .mp4) → this plays alone
@@ -121,7 +121,7 @@
 #hero-final-bg {
   position: absolute;
   inset: -3%;                         /* bleed for zoom headroom */
-  background-image: url('images/brand-ethos.png');
+  background-image: url('images/brand-ethos.jpg');
   background-size: cover;
   background-position: center center;
   opacity: 0;
