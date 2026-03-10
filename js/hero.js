@@ -67,10 +67,10 @@
       duration: 3800
     },
     {
-      word:    'Reveal',
-      eyebrow: 'Beauty Devices',
-      title:   'Smooth, sculpted, travel-ready essentials.',
-      body:    'From grooming tools to skincare companions—refined, effortless, beautifully considered.',
+      word:    'Refresh',
+      eyebrow: 'Hydration & Environment',
+      title:   'Balanced Air. Elevated Comfort.',
+      body:    'Devices designed to restore humidity, calm the air, and support the kind of environment where your body — and your skin — can actually recover.',
       image:   'images/FACE-DEVICES.jpg',
       duration: 3800
     },
@@ -487,4 +487,3 @@
   })();
 
 })();
-
