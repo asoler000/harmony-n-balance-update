@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sleep &amp; Sound — Harmony &amp; Balance</title>
-  <meta name="description" content="Sound machines, sleep essentials, and rest-focused design. The Sleep &amp; Sound collection by Harmony &amp; Balance." />
+  <meta name="description" content="Sound machines and sleep-focused devices that help create quieter, calmer environments. Harmony &amp; Balance Sleep &amp; Sound collection." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,175 +15,214 @@
   <link rel="stylesheet" href="../css/category.css" />
   <link rel="stylesheet" href="../css/footer.css" />
 
-  <!-- Sleep & Sound — editorial overrides + glow animation -->
   <style>
+    /* ── Page-level editorial overrides ── */
 
-    /* ── Glow Feature ───────────────────────────────────────── */
-    .glow-feature {
-      position: relative;
-      display: inline-block;
-      width: 100%;
+    /* Hero */
+    .cat-hero__content p {
+      max-width: 52ch;
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      line-height: 1.75;
+      opacity: 0.88;
     }
 
-    .glow-feature::before {
-      content: "";
-      position: absolute;
-      inset: 18% 22%;
-      background: radial-gradient(circle, rgba(255,214,140,0.35) 0%, rgba(255,214,140,0.18) 35%, rgba(255,214,140,0) 70%);
-      filter: blur(28px);
-      z-index: 0;
-      animation: hbGlowPulse 5s ease-in-out infinite;
-      pointer-events: none;
+    /* ── Collection Introduction ── */
+    .collection-intro {
+      background: var(--cream, #faf8f4);
+      padding: var(--space-16, 5rem) 0 var(--space-12, 3.5rem);
+      text-align: center;
+    }
+    .collection-intro__eyebrow {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold, #b89a5e);
+      margin-bottom: var(--space-4, 1rem);
+    }
+    .collection-intro__heading {
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--ink, #1a1a1a);
+      margin-bottom: var(--space-5, 1.25rem);
+    }
+    .collection-intro__body {
+      max-width: 62ch;
+      margin: 0 auto;
+      font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+      line-height: 1.8;
+      color: var(--ink-light, #555);
     }
 
-    .glow-feature img {
+    /* ── Editorial Section ── */
+    .editorial-section {
+      background: #fff;
+      padding: var(--space-16, 5rem) 0;
+    }
+    .editorial-section .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .editorial-section__image-wrap {
       position: relative;
-      z-index: 1;
+      border-radius: var(--radius-lg, 12px);
+      overflow: hidden;
+    }
+    .editorial-section__image-wrap img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: var(--radius-lg, 12px);
-    }
-
-    @keyframes hbGlowPulse {
-      0%, 100% { opacity: .55; transform: scale(.97); }
-      50%       { opacity: .90; transform: scale(1.05); }
-    }
-
-    /* ── Collection Highlights (replaces product grid) ─────── */
-    .collection-highlights {
-      padding: var(--space-16, 4rem) 0;
-    }
-
-    .collection-highlights .section-header {
-      margin-bottom: var(--space-12, 3rem);
-    }
-
-    .highlights__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-8, 2rem);
-    }
-
-    @media (min-width: 640px) {
-      .highlights__grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    .highlight-card {
-      background: var(--surface, #fff);
-      border-radius: var(--radius-lg, 12px);
-      overflow: hidden;
-      box-shadow: 0 2px 18px rgba(0,0,0,0.07);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .highlight-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.11);
-    }
-
-    .highlight-card__img-wrap {
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-    }
-
-    .highlight-card__img-wrap img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
+      aspect-ratio: 3 / 4;
+      filter: brightness(0.97) saturate(0.93);
+      transition: transform 0.9s ease;
+    }
+    .editorial-section__image-wrap:hover img {
+      transform: scale(1.03);
+    }
+    .editorial-section__content {
+      padding: var(--space-6, 1.5rem) 0;
+    }
+    .editorial-section__eyebrow {
       display: block;
-      transition: transform 0.6s ease;
-    }
-
-    .highlight-card:hover .highlight-card__img-wrap img {
-      transform: scale(1.04);
-    }
-
-    .highlight-card__body {
-      padding: var(--space-6, 1.5rem);
-    }
-
-    .highlight-card__label {
       font-size: 0.68rem;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--accent, #a8925a);
-      margin-bottom: var(--space-2, 0.5rem);
+      color: var(--gold, #b89a5e);
+      margin-bottom: var(--space-5, 1.25rem);
     }
-
-    .highlight-card__name {
-      font-size: 1.05rem;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      color: var(--text, #1a1a1a);
-      margin: 0 0 var(--space-3, 0.75rem);
+    .editorial-section__heading {
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      line-height: 1.25;
+      color: var(--ink, #1a1a1a);
+      margin-bottom: var(--space-6, 1.5rem);
     }
-
-    .highlight-card__desc {
+    .editorial-section__body {
+      font-size: clamp(0.9rem, 1.3vw, 1rem);
+      line-height: 1.85;
+      color: var(--ink-light, #555);
+      margin-bottom: var(--space-5, 1.25rem);
+    }
+    .editorial-section__closing {
       font-size: 0.88rem;
-      line-height: 1.65;
-      color: var(--text-secondary, #666);
+      font-style: italic;
+      color: var(--gold-dark, #96783d);
+      border-left: 2px solid var(--gold, #b89a5e);
+      padding-left: var(--space-4, 1rem);
+      margin-top: var(--space-8, 2rem);
+    }
+
+    /* ── Within the Collection ── */
+    .within-collection {
+      background: var(--cream, #faf8f4);
+      padding: var(--space-16, 5rem) 0;
+    }
+    .within-collection__header {
+      margin-bottom: var(--space-10, 2.5rem);
+    }
+    .within-collection__eyebrow {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold, #b89a5e);
+      margin-bottom: var(--space-3, 0.75rem);
+    }
+    .within-collection__heading {
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--ink, #1a1a1a);
+    }
+    .within-collection__list {
+      list-style: none;
+      padding: 0;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .within-collection__item {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-6, 1.5rem);
+      padding: var(--space-6, 1.5rem) 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    .within-collection__item:hover {
+      background: rgba(184, 154, 94, 0.04);
+    }
+    .within-collection__item-num {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--gold, #b89a5e);
+      min-width: 2.5rem;
+      font-weight: 400;
+    }
+    .within-collection__item-name {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-weight: 300;
+      color: var(--ink, #1a1a1a);
+      letter-spacing: 0.03em;
+      min-width: 18ch;
+    }
+    .within-collection__item-desc {
+      font-size: 0.9rem;
+      color: var(--ink-light, #777);
+      line-height: 1.6;
     }
 
-    /* ── Glow Section Wrapper ───────────────────────────────── */
-    .glow-section {
-      padding: var(--space-16, 4rem) 0;
-      background: var(--surface-2, #f7f5f2);
+    /* ── CTA Section ── */
+    .sleep-cta {
+      background: var(--ink, #1a1a1a);
+      color: #fff;
+      padding: var(--space-20, 7rem) 0;
+      text-align: center;
+    }
+    .sleep-cta__eyebrow {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold, #b89a5e);
+      margin-bottom: var(--space-5, 1.25rem);
+    }
+    .sleep-cta__heading {
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      margin-bottom: var(--space-6, 1.5rem);
+      color: #fff;
+    }
+    .sleep-cta__body {
+      max-width: 55ch;
+      margin: 0 auto var(--space-10, 2.5rem);
+      font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+      line-height: 1.8;
+      color: rgba(255,255,255,0.7);
     }
 
-    .glow-section__inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-12, 3rem);
-      align-items: center;
-    }
-
-    @media (min-width: 900px) {
-      .glow-section__inner {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-16, 4rem);
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .editorial-section .container {
+        grid-template-columns: 1fr;
+      }
+      .editorial-section__image-wrap img {
+        aspect-ratio: 4 / 3;
+      }
+      .within-collection__item {
+        flex-direction: column;
+        gap: var(--space-2, 0.5rem);
       }
     }
-
-    /* ── Editorial Note (below glow image) ─────────────────── */
-    .editorial-note {
-      padding-top: var(--space-10, 2.5rem);
-    }
-
-    .editorial-note h3 {
-      font-size: clamp(1.35rem, 2.5vw, 1.9rem);
-      font-weight: 300;
-      letter-spacing: -0.025em;
-      line-height: 1.25;
-      margin-bottom: var(--space-5, 1.25rem);
-      color: var(--text, #1a1a1a);
-    }
-
-    .editorial-note p {
-      font-size: 0.95rem;
-      line-height: 1.72;
-      color: var(--text-secondary, #555);
-      margin-bottom: var(--space-5, 1.25rem);
-    }
-
-    .editorial-note .supporting-line {
-      font-size: 0.85rem;
-      font-style: italic;
-      color: var(--accent, #a8925a);
-      letter-spacing: 0.01em;
-      line-height: 1.6;
-      border-left: 2px solid var(--accent, #a8925a);
-      padding-left: var(--space-4, 1rem);
-      margin-top: var(--space-6, 1.5rem);
-    }
-
-    /* ── Benefits grid editorial overrides ─────────────────── */
-    .benefit-item__title {
-      font-weight: 400;
-      letter-spacing: -0.01em;
-    }
-
   </style>
 </head>
 <body>
@@ -205,11 +244,11 @@
             <svg class="nav__caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
           </a>
           <div class="nav__dropdown" role="menu">
-            <a href="beauty.html"     class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">✨</span> Beauty Technology</a>
-            <a href="sleep.html"      class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🌙</span> Sleep &amp; Sound</a>
-            <a href="movement.html"   class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🧘</span> Yoga &amp; Movement</a>
-            <a href="atmosphere.html" class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🌿</span> Aromatherapy</a>
-            <a href="hydration.html"  class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">💧</span> Hydration &amp; Air</a>
+            <a href="beauty.html"      class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">✨</span> Beauty Technology</a>
+            <a href="sleep.html"       class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🌙</span> Sleep &amp; Sound</a>
+            <a href="movement.html"    class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🧘</span> Yoga &amp; Movement</a>
+            <a href="atmosphere.html"  class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">🌿</span> Aromatherapy</a>
+            <a href="hydration.html"   class="nav__dropdown-link" role="menuitem"><span class="nav__dropdown-icon">💧</span> Hydration &amp; Air</a>
           </div>
         </li>
         <li class="nav__item"><a href="blog/index.html" class="nav__link">Journal</a></li>
@@ -218,7 +257,7 @@
       </ul>
     </nav>
     <div class="header__actions">
-      <a href="../index.html#contact" class="btn btn--dark">Contact Us</a>
+      <a href="../index.html#contact" class="btn btn--dark">Request Line Sheet</a>
       <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
@@ -237,206 +276,154 @@
         Collections <svg width="14" height="14" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
       </button>
       <div id="mobile-sub-collections" class="mobile-nav__sub">
-        <a href="beauty.html"     class="mobile-nav__sub-link">✨ Beauty Technology</a>
-        <a href="sleep.html"      class="mobile-nav__sub-link">🌙 Sleep &amp; Sound</a>
-        <a href="movement.html"   class="mobile-nav__sub-link">🧘 Yoga &amp; Movement</a>
-        <a href="atmosphere.html" class="mobile-nav__sub-link">🌿 Aromatherapy</a>
-        <a href="hydration.html"  class="mobile-nav__sub-link">💧 Hydration &amp; Air</a>
+        <a href="beauty.html"      class="mobile-nav__sub-link">✨ Beauty Technology</a>
+        <a href="sleep.html"       class="mobile-nav__sub-link">🌙 Sleep &amp; Sound</a>
+        <a href="movement.html"    class="mobile-nav__sub-link">🧘 Yoga &amp; Movement</a>
+        <a href="atmosphere.html"  class="mobile-nav__sub-link">🌿 Aromatherapy</a>
+        <a href="hydration.html"   class="mobile-nav__sub-link">💧 Hydration &amp; Air</a>
       </div>
     </li>
-    <li><a href="blog/index.html"       class="mobile-nav__link">Journal</a></li>
-    <li><a href="../index.html#about"   class="mobile-nav__link">About</a></li>
-    <li><a href="../index.html#contact" class="mobile-nav__link">Contact</a></li>
+    <li><a href="blog/index.html"        class="mobile-nav__link">Journal</a></li>
+    <li><a href="../index.html#about"    class="mobile-nav__link">About</a></li>
+    <li><a href="../index.html#contact"  class="mobile-nav__link">Contact</a></li>
   </ul>
   <div class="mobile-nav__footer">
-    <a href="../index.html#contact" class="btn btn--dark" style="width:100%;justify-content:center;">Contact Us</a>
+    <a href="../index.html#contact" class="btn btn--dark" style="width:100%;justify-content:center;">Request Line Sheet</a>
   </div>
 </nav>
 
 
-<!-- ════ CATEGORY HERO ════ -->
+<!-- ════ 1. HERO ════ -->
 <section class="cat-hero">
   <div class="cat-hero__bg" style="background-image: url('../images/SOUND-MACHINE.jpg');"></div>
   <div class="cat-hero__overlay"></div>
   <div class="cat-hero__content">
     <span class="eyebrow">Collection 02</span>
     <h1>Sleep &amp; Sound</h1>
-    <p>Sleep begins with the environment around it. From portable sound machines with nature sounds and white noise to compact bedside designs and soft-glow sleep essentials, this collection is created to bring calm, comfort, and quiet beauty into the end of the day.</p>
+    <p>The hour before sleep is the most underrated part of your day. These devices make it count — quieting the noise, softening the light, and giving your nervous system permission to finally let go.</p>
     <div class="btn-row" style="margin-top:var(--space-8);">
-      <a href="#collection" class="btn btn--dark">Explore the Collection</a>
+      <a href="#collection-intro" class="btn btn--dark">Explore the Collection</a>
     </div>
   </div>
 </section>
 
 
-<!-- ════ COLLECTION HIGHLIGHTS ════ -->
-<section id="collection" class="collection-highlights section">
+<!-- ════ 2. COLLECTION INTRODUCTION ════ -->
+<section id="collection-intro" class="collection-intro">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow">The Collection</span>
-      <h2>Objects for quieter evenings.</h2>
-      <p>Each piece in this collection is designed around a single intention — to make the end of the day feel more considered, more calm, and more restorative.</p>
-    </div>
-
-    <div class="highlights__grid">
-
-      <div class="highlight-card reveal reveal--delay-1">
-        <div class="highlight-card__img-wrap">
-          <img src="../images/SOUND-MACHINE.jpg" alt="Portable Sound Machines" />
-        </div>
-        <div class="highlight-card__body">
-          <div class="highlight-card__label">Sound</div>
-          <h3 class="highlight-card__name">Portable Sound Machines</h3>
-          <p class="highlight-card__desc">Compact sound companions designed to bring white noise, nature sounds, and a calmer atmosphere into the spaces where rest begins.</p>
-        </div>
-      </div>
-
-      <div class="highlight-card reveal reveal--delay-2">
-        <div class="highlight-card__img-wrap">
-          <img src="../images/SOUND-MACHINE.jpg" alt="Bedside Glow Devices" />
-        </div>
-        <div class="highlight-card__body">
-          <div class="highlight-card__label">Light</div>
-          <h3 class="highlight-card__name">Bedside Glow Devices</h3>
-          <p class="highlight-card__desc">Softly illuminated pieces created to bring warmth, visual calm, and a gentler transition into the evening.</p>
-        </div>
-      </div>
-
-      <div class="highlight-card reveal reveal--delay-3">
-        <div class="highlight-card__img-wrap">
-          <img src="../images/SOUND-MACHINE.jpg" alt="Sleep Atmosphere Essentials" />
-        </div>
-        <div class="highlight-card__body">
-          <div class="highlight-card__label">Atmosphere</div>
-          <h3 class="highlight-card__name">Sleep Atmosphere Essentials</h3>
-          <p class="highlight-card__desc">Thoughtfully designed objects that support a quieter environment through sound, light, and everyday ease.</p>
-        </div>
-      </div>
-
-    </div>
+    <span class="collection-intro__eyebrow">Sleep &amp; Sound</span>
+    <h2 class="collection-intro__heading">Designed for the quieter hours.</h2>
+    <p class="collection-intro__body">
+      The Sleep &amp; Sound collection brings together sound machines, ambient glow devices, and sleep-support tools — each one built to help create an environment where rest arrives more naturally. Compact, considered, and built for the bedside.
+    </p>
   </div>
 </section>
 
 
-<!-- ════ GLOW FEATURE ════ -->
-<section class="glow-section">
+<!-- ════ 3. EDITORIAL SECTION ════ -->
+<section class="editorial-section">
   <div class="container">
-    <div class="glow-section__inner">
 
-      <div class="glow-feature reveal">
-        <img src="../images/SOUND-MACHINE.jpg" alt="A softer light for the end of the day" />
-      </div>
-
-      <div class="editorial-note reveal reveal--delay-2">
-        <span class="eyebrow">A closer look</span>
-        <h3>Designed for the quieter hours.</h3>
-        <p>Our sound machines are designed for the moments when everything else has been set aside. Compact enough to live permanently on a nightstand, considered enough to feel like they belong there — they bring white noise, nature sounds, and a calmer environment into the spaces where rest is most needed.</p>
-        <p class="supporting-line">Simple to use, easy to live with, and designed to become a natural part of the way the day ends.</p>
-      </div>
-
+    <div class="editorial-section__image-wrap reveal">
+      <img
+        src="../images/SOUND-MACHINE.jpg"
+        alt="Harmony &amp; Balance Sound Machine — bedside sleep device"
+      />
     </div>
+
+    <div class="editorial-section__content reveal">
+      <span class="editorial-section__eyebrow">The thinking behind the collection</span>
+      <h2 class="editorial-section__heading">Better rest starts with what surrounds you.</h2>
+      <p class="editorial-section__body">
+        Harmony &amp; Balance Sleep &amp; Sound products are built around one insight: the quality of your rest is shaped by the environment you create before it. These are not gadgets — they are quiet, functional objects that help make the transition to rest feel easier, softer, and more natural.
+      </p>
+      <p class="editorial-section__body">
+        Whether it is the steady rhythm of white noise filling a room, or the gentle presence of a low-lit device on a nightstand, each piece in the collection is designed to reduce friction and support a calmer close to the day.
+      </p>
+      <p class="editorial-section__closing">
+        Quiet by design. Restful by intention.
+      </p>
+    </div>
+
   </div>
 </section>
 
 
-<!-- ════ FEATURE HIGHLIGHT ════ -->
-<section class="feature-highlight section">
+<!-- ════ 4. WITHIN THE COLLECTION ════ -->
+<section class="within-collection">
   <div class="container">
-    <div class="feature-highlight__row reveal">
-      <div class="feature-highlight__image">
-        <img src="../images/SOUND-MACHINE.jpg" alt="The environment shapes the rest." />
-      </div>
-      <div class="feature-highlight__content">
-        <span class="eyebrow">Why the environment matters</span>
-        <h3>Better rest starts with what surrounds you.</h3>
-        <p>The environment shapes the experience of rest. Our Sleep &amp; Sound collection is designed to support the quieter moments at the end of the day through calming sound, soft light, and bedside forms that feel simple, unobtrusive, and easy to live with.</p>
-        <ul class="feature-highlight__list">
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Sound designed to soften distraction and support a calmer environment</li>
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Gentle light and bedside forms created with evening use in mind</li>
-          <li class="feature-list__item"><span class="feature-list__dot"></span> Thoughtful details that feel unobtrusive, simple, and easy to live with</li>
-          <li class="feature-list__item"><span class="feature-list__dot"></span> A collection shaped around comfort, atmosphere, and everyday ease</li>
-        </ul>
-        <div class="btn-row">
-          <a href="../index.html#categories" class="btn btn--dark">Explore the Brand</a>
-          <a href="../index.html#contact" class="btn btn--outline">Contact Us</a>
-        </div>
-      </div>
+    <div class="within-collection__header">
+      <span class="within-collection__eyebrow">What we offer</span>
+      <h2 class="within-collection__heading">Within the collection.</h2>
     </div>
+    <ul class="within-collection__list">
+      <li class="within-collection__item reveal">
+        <span class="within-collection__item-num">01</span>
+        <span class="within-collection__item-name">Portable Sound Machines</span>
+        <span class="within-collection__item-desc">Compact sound companions for white-noise and nature sounds — designed for the bedside, travel, or any space that needs a quieter atmosphere.</span>
+      </li>
+      <li class="within-collection__item reveal reveal--delay-1">
+        <span class="within-collection__item-num">02</span>
+        <span class="within-collection__item-name">Bedside Glow Devices</span>
+        <span class="within-collection__item-desc">Softly illuminated pieces for visual calm — low light that signals the close of the day without the disruption of screens or sharp light sources.</span>
+      </li>
+      <li class="within-collection__item reveal reveal--delay-2">
+        <span class="within-collection__item-num">03</span>
+        <span class="within-collection__item-name">Sleep Atmosphere Essentials</span>
+        <span class="within-collection__item-desc">Objects supporting a quieter environment through sound, light, and ease — the small, considered details that help the room feel more like rest.</span>
+      </li>
+    </ul>
   </div>
 </section>
 
 
-<!-- ════ BENEFITS ════ -->
-<section class="benefits section--sm">
+<!-- ════ 5. CTA SECTION ════ -->
+<section class="sleep-cta">
   <div class="container">
-    <div class="benefits__grid">
-
-      <div class="benefit-item reveal">
-        <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </div>
-        <div class="benefit-item__title">Calmer Evenings</div>
-        <p class="benefit-item__text">Designed to help ease the transition from activity to rest through sound, light, and atmosphere.</p>
-      </div>
-
-      <div class="benefit-item reveal reveal--delay-1">
-        <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="benefit-item__title">Thoughtful Simplicity</div>
-        <p class="benefit-item__text">Objects created to feel intuitive, unobtrusive, and easy to return to each night.</p>
-      </div>
-
-      <div class="benefit-item reveal reveal--delay-2">
-        <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="benefit-item__title">Comfort by Design</div>
-        <p class="benefit-item__text">Forms, finishes, and functions chosen to support a softer experience of winding down.</p>
-      </div>
-
-      <div class="benefit-item reveal reveal--delay-3">
-        <div class="benefit-item__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="benefit-item__title">A More Restful Space</div>
-        <p class="benefit-item__text">A collection that brings quiet, balance, and visual calm into the places where rest begins.</p>
-      </div>
-
+    <span class="sleep-cta__eyebrow">For Wholesale &amp; Trade</span>
+    <h2 class="sleep-cta__heading">Bring the Sleep &amp; Sound collection<br>to your customers.</h2>
+    <p class="sleep-cta__body">
+      The Sleep &amp; Sound collection is available for wholesale and trade buyers. Each product ships shelf-ready with brand-consistent packaging and full category support. Request a line sheet to explore available SKUs, pricing tiers, and minimum order details.
+    </p>
+    <div class="btn-row" style="justify-content:center; gap:var(--space-4);">
+      <a href="../index.html#contact" class="btn btn--gold">Request Line Sheet</a>
+      <a href="../index.html#about"   class="btn btn--ghost-light">Learn About the Brand</a>
     </div>
   </div>
 </section>
 
 
-<!-- ════ NEWSLETTER + FOOTER ════ -->
+<!-- ════ 6. NEWSLETTER ════ -->
 <div class="newsletter-strip">
   <div class="newsletter-strip__inner">
     <div class="newsletter-strip__copy">
-      <div class="newsletter-strip__eyebrow">Stay in the World</div>
-      <h3 class="newsletter-strip__heading">New arrivals, thoughtful stories,<br>and moments of inspiration.</h3>
+      <div class="newsletter-strip__eyebrow">Rest Better</div>
+      <h3 class="newsletter-strip__heading">New arrivals and sleep-focused<br>brand inspiration.</h3>
     </div>
     <form class="newsletter-strip__form" onsubmit="return false;">
-      <input class="newsletter-input" type="email" placeholder="Your email address" aria-label="Email address" />
+      <input class="newsletter-input" type="email" placeholder="Your email address" />
       <button class="btn btn--gold" type="submit">Subscribe</button>
     </form>
   </div>
 </div>
 
+
+<!-- ════ 7. FOOTER ════ -->
 <footer id="site-footer">
   <div class="footer__inner">
     <div class="footer__grid">
       <div class="footer__brand">
         <span class="logo-text footer__logo-text">HARMONY &amp; BALANCE</span>
-        <p class="footer__tagline">A refined world of beauty, sleep, movement, hydration, and atmosphere — designed to bring calm, confidence, and balance into everyday life.</p>
+        <p class="footer__tagline">Beauty. Sleep. Movement. Atmosphere. One brand, one world.</p>
       </div>
       <div>
         <div class="footer__col-label">Collections</div>
         <ul class="footer__nav-list">
-          <li><a href="beauty.html"     class="footer__nav-link">Beauty Technology</a></li>
-          <li><a href="sleep.html"      class="footer__nav-link">Sleep &amp; Sound</a></li>
-          <li><a href="movement.html"   class="footer__nav-link">Yoga &amp; Movement</a></li>
-          <li><a href="atmosphere.html" class="footer__nav-link">Aromatherapy</a></li>
-          <li><a href="hydration.html"  class="footer__nav-link">Hydration &amp; Air</a></li>
+          <li><a href="beauty.html"      class="footer__nav-link">Beauty Technology</a></li>
+          <li><a href="sleep.html"       class="footer__nav-link">Sleep &amp; Sound</a></li>
+          <li><a href="movement.html"    class="footer__nav-link">Yoga &amp; Movement</a></li>
+          <li><a href="atmosphere.html"  class="footer__nav-link">Aromatherapy</a></li>
+          <li><a href="hydration.html"   class="footer__nav-link">Hydration &amp; Air</a></li>
         </ul>
       </div>
       <div>
@@ -450,15 +437,15 @@
       <div>
         <div class="footer__col-label">Explore</div>
         <ul class="footer__nav-list">
-          <li><a href="../index.html#categories" class="footer__nav-link">View Collections</a></li>
-          <li><a href="../index.html#about"      class="footer__nav-link">Our Story</a></li>
-          <li><a href="blog/index.html"          class="footer__nav-link">The Journal</a></li>
-          <li><a href="../index.html#contact"    class="footer__nav-link">Get in Touch</a></li>
+          <li><a href="../index.html#categories"  class="footer__nav-link">View Collections</a></li>
+          <li><a href="../index.html#about"        class="footer__nav-link">Our Story</a></li>
+          <li><a href="blog/index.html"            class="footer__nav-link">The Journal</a></li>
+          <li><a href="../index.html#contact"      class="footer__nav-link">Get in Touch</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <p class="footer__copy">harmony &amp; balance &nbsp;&middot;&nbsp; &copy; 2026 all rights reserved</p>
+      <p class="footer__copy">harmony &nbsp;<span>◌</span>&nbsp; balance &nbsp;·&nbsp; &copy; 2026 all rights reserved</p>
       <div class="footer__legal-links">
         <a href="#" class="footer__legal-link">Privacy</a>
         <a href="#" class="footer__legal-link">Terms</a>
