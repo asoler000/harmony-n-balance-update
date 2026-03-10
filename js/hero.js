@@ -28,9 +28,9 @@
   var slides = [
     {
       word:    'Breathe',
-      eyebrow: 'Aroma Rituals',
+      eyebrow: 'Aromatherapy',
       title:   'Wellness technology for a softer, calmer home.',
-      body:    'Diffusers and scent rituals designed to turn everyday space into an atmosphere of ease, quiet, and restoration.',
+      body:    'Diffusers and aroma tools designed to turn everyday space into an atmosphere of ease, quiet, and restoration.',
       image:   'images/DIFFUSER.jpg',
       duration: 3800
     },
@@ -38,14 +38,14 @@
       word:    'Restore',
       eyebrow: 'Facial Rejuvenation',
       title:   'Beauty tools that make care feel intentional.',
-      body:    'Facial devices inspired by modern beauty rituals and time-honored techniques—crafted to support a more radiant-looking routine.',
+      body:    'Facial devices inspired by modern skincare and time-honored techniques—crafted to support a more radiant-looking daily practice.',
       image:   'images/FACE-DEVICES-2.jpg',
       duration: 3800
     },
     {
       word:    'Reflect',
       eyebrow: 'Mirrors',
-      title:   'Light, clarity, and a more elevated getting-ready ritual.',
+      title:   'Light, clarity, and a more elevated start to your day.',
       body:    'Thoughtfully designed mirrors that bring precision, glow, and calm to the moments where beauty begins.',
       image:   'images/MIRRORS.jpg',
       duration: 3800
@@ -54,15 +54,15 @@
       word:    'Unwind',
       eyebrow: 'Sleep & Sound',
       title:   'A gentler rhythm for rest, recovery, and reset.',
-      body:    'Sleep machines and sound-led rituals that help transform the end of the day into something more grounding and restorative.',
+      body:    'Sleep machines and ambient sound that help transform the end of the day into something more grounding and restorative.',
       image:   'images/SOUND-MACHINE.jpg',
       duration: 3800
     },
     {
       word:    'Move',
-      eyebrow: 'Yoga & Recovery',
-      title:   'Balance in motion, strength in ritual.',
-      body:    'Yoga wheels and movement essentials designed to support flexibility, release, alignment, and a more centered daily practice.',
+      eyebrow: 'Yoga & Movement',
+      title:   'Movement. Recovery. Balance.',
+      body:    'Tools designed to support stretching, movement, and recovery — helping bring balance, strength, and restoration into everyday life.',
       image:   'images/yoga-wheel.jpg',
       duration: 3800
     },
@@ -70,7 +70,7 @@
       word:    'Refresh',
       eyebrow: 'Hydration & Environment',
       title:   'Balanced Air. Elevated Comfort.',
-      body:    'Devices designed to restore humidity, calm the air, and support the kind of environment where your body — and your skin — can actually recover.',
+      body:    'Thoughtfully designed devices that help create balanced, comfortable environments — supporting everyday wellbeing through improved air moisture and refreshing living spaces.',
       image:   'images/HYDRATION-2.jpg',
       duration: 3800
     },
@@ -78,7 +78,7 @@
       word:    'Balance',
       eyebrow: 'Harmony & Balance',
       title:   'Wellness and beauty for a more harmonious way of life.',
-      body:    'A design-forward world of rituals across beauty, sleep, movement, and atmosphere—created to help you feel restored, confident, and radiant.',
+      body:    'A design-forward world of beauty, sleep, movement, and atmosphere—created to help you feel restored, confident, and radiant.',
       image:   null,
       duration: 10000,
       isFinal: true
