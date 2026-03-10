@@ -1,20 +1,20 @@
 /* ============================================================
-   HARMONY & BALANCE ‚Äî hero.js  v5
+   HARMONY & BALANCE — hero.js  v5
    The definitive hybrid. All 9 upgrades live here.
 
    FROM v4 (ours):
-   ‚úÖ FIX 1 ‚Äî Lerp orb: 720px rolling light, lerp 0.065
-   ‚úÖ FIX 2 ‚Äî 3D perspective tilt on hero copy (¬±2.8¬∞/2.2¬∞)
-   ‚úÖ FIX 3 ‚Äî Blue-gray overlay rgba(237,242,245,0.65)
-   ‚úÖ FIX 4 ‚Äî Overlay opacity 0.65, images breathe
+   ✅ FIX 1 — Lerp orb: 720px rolling light, lerp 0.065
+   ✅ FIX 2 — 3D perspective tilt on hero copy (±2.8°/2.2°)
+   ✅ FIX 3 — Blue-gray overlay rgba(237,242,245,0.65)
+   ✅ FIX 4 — Overlay opacity 0.65, images breathe
 
    STOLEN FROM YOUR v2 (upgrades 5-9):
-   ‚úÖ UP  5 ‚Äî Masked curtain word reveal: translateY(110%) inside
-              overflow:hidden wrapper ‚Äî the Vogue/Herm√®s technique
-   ‚úÖ UP  6 ‚Äî Ken Burns image drift in CSS @keyframes kenBurns
-   ‚úÖ UP  7 ‚Äî Full-width progress bar, resets every slide
-   ‚úÖ UP  8 ‚Äî Letter spacing -0.075em, 9rem ceiling
-   ‚úÖ UP  9 ‚Äî Staggered cascade: title +120ms, body +220ms
+   ✅ UP  5 — Masked curtain word reveal: translateY(110%) inside
+              overflow:hidden wrapper — the Vogue/Hermès technique
+   ✅ UP  6 — Ken Burns image drift in CSS @keyframes kenBurns
+   ✅ UP  7 — Full-width progress bar, resets every slide
+   ✅ UP  8 — Letter spacing -0.075em, 9rem ceiling
+   ✅ UP  9 — Staggered cascade: title +120ms, body +220ms
    ============================================================ */
 
 (function () {
@@ -38,7 +38,7 @@
       word:    'Restore',
       eyebrow: 'Facial Rejuvenation',
       title:   'Beauty tools that make care feel intentional.',
-      body:    'Facial devices inspired by modern beauty rituals and time-honored techniques‚Äîcrafted to support a more radiant-looking routine.',
+      body:    'Facial devices inspired by modern beauty rituals and time-honored techniques—crafted to support a more radiant-looking routine.',
       image:   'images/FACE-DEVICES-2.jpg',
       duration: 3800
     },
@@ -70,7 +70,7 @@
       word:    'Reveal',
       eyebrow: 'Beauty Devices',
       title:   'Smooth, sculpted, travel-ready essentials.',
-      body:    'From grooming tools to skincare companions‚Äîrefined, effortless, beautifully considered.',
+      body:    'From grooming tools to skincare companions—refined, effortless, beautifully considered.',
       image:   'images/FACE-DEVICES.jpg',
       duration: 3800
     },
@@ -78,7 +78,7 @@
       word:    'Balance',
       eyebrow: 'Harmony & Balance',
       title:   'Wellness and beauty for a more harmonious way of life.',
-      body:    'A design-forward world of rituals across beauty, sleep, movement, and atmosphere‚Äîcreated to help you feel restored, confident, and radiant.',
+      body:    'A design-forward world of rituals across beauty, sleep, movement, and atmosphere—created to help you feel restored, confident, and radiant.',
       image:   null,
       duration: 10000,
       isFinal: true
@@ -344,16 +344,16 @@
     if (overlayRadial) overlayRadial.classList.add('dim');
     if (overlayBottom) overlayBottom.classList.add('dim');
     if (header)        header.classList.add('is-dark');
-    /* Hide the standard dots + progress bar ‚Äî final slide has its own */
+    /* Hide the standard dots + progress bar — final slide has its own */
     if (heroBottom)    heroBottom.style.display = 'none';
-    /* Activate image fallback FIRST ‚Äî video fades in on top of it */
+    /* Activate image fallback FIRST — video fades in on top of it */
     if (heroFinalBg)   heroFinalBg.classList.add('active');
     if (heroVideoWrap) heroVideoWrap.classList.add('active');
     if (heroVideo)     heroVideo.play().catch(function () {});
     if (dotsEl)        dotsEl.classList.add('dots-light');
     if (dotsFinalEl)   dotsFinalEl.classList.add('dots-light');
     if (heroContent)   heroContent.style.display = 'none';
-    /* final-slide is now position:absolute ‚Äî just make it visible */
+    /* final-slide is now position:absolute — just make it visible */
     if (finalSlide) {
       finalSlide.classList.add('visible');
     }
