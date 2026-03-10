@@ -71,7 +71,7 @@
       eyebrow: 'Hydration & Environment',
       title:   'Balanced Air. Elevated Comfort.',
       body:    'Devices designed to restore humidity, calm the air, and support the kind of environment where your body — and your skin — can actually recover.',
-      image:   'images/FACE-DEVICES.jpg',
+      image:   'images/HYDRATION-2.jpg',
       duration: 3800
     },
     {
