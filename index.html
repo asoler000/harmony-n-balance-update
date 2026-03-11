@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harmony & Balance | Wellness & Beauty</title>
-  <meta name="description" content="A design-forward world of beauty, sleep, movement, hydration, and atmosphere‚Äîcreated to bring calm, confidence, and balance into everyday life." />
+  <meta name="description" content="A design-forward world of beauty, sleep, movement, hydration, and atmosphere—created to bring calm, confidence, and balance into everyday life." />
 
   <!-- Standard SEO -->
   <meta name="robots" content="index, follow" />
@@ -16,21 +16,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Harmony & Balance" />
   <meta property="og:title" content="Harmony & Balance | Wellness & Beauty" />
-  <meta property="og:description" content="A design-forward world of beauty, sleep, movement, hydration, and atmosphere‚Äîcreated to bring calm, confidence, and balance into everyday life." />
+  <meta property="og:description" content="A design-forward world of beauty, sleep, movement, hydration, and atmosphere—created to bring calm, confidence, and balance into everyday life." />
   <meta property="og:url" content="https://harmonyandbalance.com/" />
   <meta property="og:image" content="https://harmonyandbalance.com/images/og-share.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Harmony & Balance ‚Äî Wellness & Beauty for a More Harmonious Way of Life" />
+  <meta property="og:image:alt" content="Harmony & Balance — Wellness & Beauty for a More Harmonious Way of Life" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@harmonybalance" />
   <meta name="twitter:title" content="Harmony & Balance | Wellness & Beauty" />
-  <meta name="twitter:description" content="A design-forward world of beauty, sleep, movement, hydration, and atmosphere‚Äîcreated to bring calm, confidence, and balance into everyday life." />
+  <meta name="twitter:description" content="A design-forward world of beauty, sleep, movement, hydration, and atmosphere—created to bring calm, confidence, and balance into everyday life." />
   <meta name="twitter:image" content="https://harmonyandbalance.com/images/og-share.jpg" />
-  <meta name="twitter:image:alt" content="Harmony & Balance ‚Äî Wellness & Beauty" />
+  <meta name="twitter:image:alt" content="Harmony & Balance — Wellness & Beauty" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32" />
@@ -65,6 +65,22 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    /* SVG Logo Styling */
+    .header__logo-svg {
+      height: 28px;
+      width: auto;
+    }
+    .footer__logo-svg {
+      height: 24px;
+      width: auto;
+      margin-bottom: var(--space-4);
+    }
+    @media (max-width: 767px) {
+      .header__logo-svg {
+        height: 22px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -77,7 +93,7 @@
   <div class="header__inner">
 
     <a href="index.html" class="header__logo" aria-label="Harmony & Balance home">
-      <span class="logo-text">HARMONY &amp; BALANCE</span>
+      <img src="images/h_n_b_logo.svg" alt="Harmony & Balance" class="header__logo-svg" />
     </a>
 
     <nav class="header__nav" aria-label="Main navigation">
@@ -95,10 +111,10 @@
           </a>
           <div class="nav__dropdown" role="menu">
             <a href="pages/beauty.html" class="nav__dropdown-link" role="menuitem">Beauty Technology</a>
-            <a href="pages/sleep.html" class="nav__dropdown-link" role="menuitem">Sleep &amp; Sound</a>
-            <a href="pages/movement.html" class="nav__dropdown-link" role="menuitem">Yoga &amp; Movement</a>
+            <a href="pages/sleep.html" class="nav__dropdown-link" role="menuitem">Sleep & Sound</a>
+            <a href="pages/movement.html" class="nav__dropdown-link" role="menuitem">Yoga & Movement</a>
             <a href="pages/atmosphere.html" class="nav__dropdown-link" role="menuitem">Aromatherapy</a>
-            <a href="pages/hydration.html" class="nav__dropdown-link" role="menuitem">Hydration &amp; Environment</a>
+            <a href="pages/hydration.html" class="nav__dropdown-link" role="menuitem">Hydration</a>
           </div>
         </li>
 
@@ -117,7 +133,7 @@
     </nav>
 
     <div class="header__actions">
-      <a href="#contact" class="btn btn--dark">Contact Us</a>
+      <a href="#contact" class="btn btn--dark">Request Line Sheet</a>
       <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
@@ -142,10 +158,10 @@
       </button>
       <div id="mobile-sub-collections" class="mobile-nav__sub">
         <a href="pages/beauty.html" class="mobile-nav__sub-link">Beauty Technology</a>
-        <a href="pages/sleep.html" class="mobile-nav__sub-link">Sleep &amp; Sound</a>
-        <a href="pages/movement.html" class="mobile-nav__sub-link">Yoga &amp; Movement</a>
+        <a href="pages/sleep.html" class="mobile-nav__sub-link">Sleep & Sound</a>
+        <a href="pages/movement.html" class="mobile-nav__sub-link">Yoga & Movement</a>
         <a href="pages/atmosphere.html" class="mobile-nav__sub-link">Aromatherapy</a>
-        <a href="pages/hydration.html" class="mobile-nav__sub-link">Hydration &amp; Environment</a>
+        <a href="pages/hydration.html" class="mobile-nav__sub-link">Hydration</a>
       </div>
     </li>
 
@@ -155,7 +171,7 @@
   </ul>
 
   <div class="mobile-nav__footer">
-    <a href="#contact" class="btn btn--dark" style="width:100%; justify-content:center;">Contact Us</a>
+    <a href="#contact" class="btn btn--dark" style="width:100%; justify-content:center;">Request Line Sheet</a>
   </div>
 </nav>
 
@@ -197,7 +213,7 @@
     <div id="final-divider"></div>
     <p id="final-tagline">Designed for a more harmonious way of life.</p>
     <p id="final-body">
-      A refined world of beauty, movement, hydration, sleep, and atmosphere‚Äî<br>
+      A refined world of beauty, movement, hydration, sleep, and atmosphere—<br>
       created to bring calm, confidence, and balance into everyday life.
     </p>
     <div id="dots-final"></div>
@@ -213,7 +229,7 @@
       <div class="brand-story__text reveal">
         <span class="eyebrow">About the Brand</span>
         <h2>A quieter, more beautiful<br>approach to wellbeing.</h2>
-        <p>Harmony &amp; Balance brings together beauty technology, mirrors, sleep essentials, yoga and movement tools, hydration, and aromatherapy in one cohesive world. Each piece is designed to feel calm, elevated, and quietly luxurious‚Äîmore like discovering a beautiful object than buying a device.</p>
+        <p>Harmony & Balance brings together beauty technology, mirrors, sleep essentials, yoga and movement tools, hydration, and aromatherapy in one cohesive world. Each piece is designed to feel calm, elevated, and quietly luxurious—more like discovering a beautiful object than buying a device.</p>
         <p>We believe the things you live with each day should support how you want to feel: clear, restored, confident, and at ease. Our collections are created to bring beauty and balance into the everyday through thoughtful design and a softer approach to modern wellness.</p>
         <div class="btn-row">
           <a href="#categories" class="btn btn--dark">Explore Collections</a>
@@ -256,10 +272,10 @@
       <h2>Objects for living well.</h2>
       <div class="philosophy__columns">
         <div class="philosophy__col">
-          <p>We believe wellbeing is shaped by the objects, habits, and environments we return to each day. Harmony &amp; Balance was created around the idea that personal care can feel both beautiful and deeply considered.</p>
+          <p>We believe wellbeing is shaped by the objects, habits, and environments we return to each day. Harmony & Balance was created around the idea that personal care can feel both beautiful and deeply considered.</p>
         </div>
         <div class="philosophy__col">
-          <p>From skincare to sleep, from movement to atmosphere, every collection is designed to support a more balanced way of living‚Äîthrough thoughtful function, calm design, and an experience that feels effortless to return to.</p>
+          <p>From skincare to sleep, from movement to atmosphere, every collection is designed to support a more balanced way of living—through thoughtful function, calm design, and an experience that feels effortless to return to.</p>
         </div>
       </div>
       <div class="philosophy__principles">
@@ -290,7 +306,7 @@
     <div class="section-header reveal">
       <span class="eyebrow">The Collections</span>
       <h2>Five collections, one point of view.</h2>
-      <p>Each collection is part of a larger vision‚Äîbeauty, sleep, movement, hydration, and atmosphere brought together through a shared language of calm design, thoughtful function, and everyday ease.</p>
+      <p>Each collection is part of a larger vision—beauty, sleep, movement, hydration, and atmosphere brought together through a shared language of calm design, thoughtful function, and everyday ease.</p>
     </div>
 
     <div class="categories__grid">
@@ -301,7 +317,7 @@
         <div class="cat-card__content">
           <div class="cat-card__eyebrow">Collection 01</div>
           <h3 class="cat-card__title">Beauty Technology</h3>
-          <span class="cat-card__link">Explore ‚Üí</span>
+          <span class="cat-card__link">Explore →</span>
         </div>
       </a>
 
@@ -310,8 +326,8 @@
         <div class="cat-card__overlay"></div>
         <div class="cat-card__content">
           <div class="cat-card__eyebrow">Collection 02</div>
-          <h3 class="cat-card__title">Sleep &amp; Sound</h3>
-          <span class="cat-card__link">Explore ‚Üí</span>
+          <h3 class="cat-card__title">Sleep & Sound</h3>
+          <span class="cat-card__link">Explore →</span>
         </div>
       </a>
 
@@ -320,8 +336,8 @@
         <div class="cat-card__overlay"></div>
         <div class="cat-card__content">
           <div class="cat-card__eyebrow">Collection 03</div>
-          <h3 class="cat-card__title">Yoga &amp; Movement</h3>
-          <span class="cat-card__link">Explore ‚Üí</span>
+          <h3 class="cat-card__title">Yoga & Movement</h3>
+          <span class="cat-card__link">Explore →</span>
         </div>
       </a>
 
@@ -331,17 +347,17 @@
         <div class="cat-card__content">
           <div class="cat-card__eyebrow">Collection 04</div>
           <h3 class="cat-card__title">Aromatherapy</h3>
-          <span class="cat-card__link">Explore ‚Üí</span>
+          <span class="cat-card__link">Explore →</span>
         </div>
       </a>
 
       <a href="pages/hydration.html" class="cat-card reveal reveal--delay-5">
-        <img class="cat-card__image" src="images/HYDRATION-2.jpg" alt="Hydration &amp; Environment collection" />
+        <img class="cat-card__image" src="images/HYDRATION-2.jpg" alt="Hydration collection" />
         <div class="cat-card__overlay"></div>
         <div class="cat-card__content">
           <div class="cat-card__eyebrow">Collection 05</div>
-          <h3 class="cat-card__title">Hydration &amp; Environment</h3>
-          <span class="cat-card__link">Explore ‚Üí</span>
+          <h3 class="cat-card__title">Hydration</h3>
+          <span class="cat-card__link">Explore →</span>
         </div>
       </a>
 
@@ -384,11 +400,11 @@
 
       <div class="home-cta__card reveal">
         <span class="eyebrow">Connect</span>
-        <h3>Step into the world of Harmony &amp; Balance.</h3>
-        <p>Discover the philosophy, collections, and visual world behind Harmony &amp; Balance‚Äîa brand shaped by calm design, thoughtful living, and the belief that everyday care should feel beautiful.</p>
+        <h3>Step into the world of Harmony & Balance.</h3>
+        <p>Discover the philosophy, collections, and visual world behind Harmony & Balance—a brand shaped by calm design, thoughtful living, and the belief that everyday care should feel beautiful.</p>
         <div class="btn-row">
           <a href="#about" class="btn btn--dark">About the Brand</a>
-          <button class="btn btn--outline">Contact Us</button>
+          <a href="/cdn-cgi/l/email-protection#b8cbcdc8c8d7caccf8dfd7d4d1deddcfd7cad3cb96dbd7d5" class="btn btn--outline">Contact Us</a>
         </div>
       </div>
 
@@ -400,21 +416,27 @@
         <div>
           <div class="contact-detail">
             <div class="contact-detail__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span>530 7th Ave, Floor 21<br>New York, NY 10018</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail__icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
             </div>
-            <a href="mailto:hello@harmonyandbalance.com">hello@harmonyandbalance.com</a>
+            <a href="/cdn-cgi/l/email-protection#6d1e181d1d021f192d0a0201040b081a021f061e430e0200"><span class="__cf_email__" data-cfemail="12616762627d606652757d7e7b7477657d6079613c717d7f">support@golifeworks.com</a>
           </div>
           <div class="contact-detail">
             <div class="contact-detail__icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-            (000) 000-0000
+            <a href="tel:+12122211863">212.221.1863</a>
           </div>
           <div class="contact-detail">
             <div class="contact-detail__icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            Mon ‚Äî Fri, 9am ‚Äî 6pm EST
+            Mon – Fri, 9am – 6pm EST
           </div>
         </div>
       </div>
@@ -443,8 +465,8 @@
     <div class="footer__grid">
 
       <div class="footer__brand">
-        <span class="footer__logo-text">HARMONY &amp; BALANCE</span>
-        <p class="footer__tagline">A refined world of beauty, sleep, movement, hydration, and atmosphere‚Äîdesigned to bring calm, confidence, and balance into everyday life.</p>
+        <img src="images/h_n_b_logo.svg" alt="Harmony & Balance" class="footer__logo-svg" />
+        <p class="footer__tagline">A refined world of beauty, sleep, movement, hydration, and atmosphere—designed to bring calm, confidence, and balance into everyday life.</p>
 
         <div class="footer__social">
           <a href="#" class="social-icon" aria-label="Instagram">
@@ -473,10 +495,10 @@
         <div class="footer__col-label">Collections</div>
         <ul class="footer__nav-list">
           <li><a href="pages/beauty.html" class="footer__nav-link">Beauty Technology</a></li>
-          <li><a href="pages/sleep.html" class="footer__nav-link">Sleep &amp; Sound</a></li>
-          <li><a href="pages/movement.html" class="footer__nav-link">Yoga &amp; Movement</a></li>
+          <li><a href="pages/sleep.html" class="footer__nav-link">Sleep & Sound</a></li>
+          <li><a href="pages/movement.html" class="footer__nav-link">Yoga & Movement</a></li>
           <li><a href="pages/atmosphere.html" class="footer__nav-link">Aromatherapy</a></li>
-          <li><a href="pages/hydration.html" class="footer__nav-link">Hydration &amp; Environment</a></li>
+          <li><a href="pages/hydration.html" class="footer__nav-link">Hydration</a></li>
         </ul>
       </div>
 
@@ -504,7 +526,7 @@
 
     <div class="footer__bottom">
       <p class="footer__copy">
-        harmony &amp; balance ‚Äî 2026 all rights reserved
+        harmony & balance — 2026 all rights reserved
       </p>
       <div class="footer__legal-links">
         <a href="#" class="footer__legal-link">Privacy</a>
@@ -515,8 +537,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="js/nav.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/nav.js"></script>
 <script src="js/hero.js"></script>
 
 </body>
