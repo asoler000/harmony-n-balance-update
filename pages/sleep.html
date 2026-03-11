@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/header.css" />
@@ -16,211 +16,404 @@
   <link rel="stylesheet" href="../css/footer.css" />
 
   <style>
-    /* ── Page-level editorial overrides ── */
+    /* ════════════════════════════════════════════════════════════
+       SLEEP & SOUND — Editorial Enhancement Layer
+       Builds on category.css with magazine-style sections
+       ════════════════════════════════════════════════════════════ */
 
-    /* Hero */
-    .cat-hero__content p {
-      max-width: 52ch;
-      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      line-height: 1.75;
-      opacity: 0.88;
+    /* ── Serif Typography ── */
+    .editorial-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
     }
 
-    /* ── Collection Introduction ── */
-    .collection-intro {
-      background: var(--cream, #faf8f4);
-      padding: var(--space-16, 5rem) 0 var(--space-12, 3.5rem);
+    /* ── Enhanced Hero (Full Viewport) ── */
+    .cat-hero--editorial {
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    .collection-intro__eyebrow {
-      display: block;
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold, #b89a5e);
-      margin-bottom: var(--space-4, 1rem);
-    }
-    .collection-intro__heading {
-      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      color: var(--ink, #1a1a1a);
-      margin-bottom: var(--space-5, 1.25rem);
-    }
-    .collection-intro__body {
-      max-width: 62ch;
-      margin: 0 auto;
-      font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-      line-height: 1.8;
-      color: var(--ink-light, #555);
+
+    .cat-hero--editorial .cat-hero__bg {
+      opacity: 0.45;
+      animation: kenBurns 25s ease-in-out infinite alternate;
     }
 
-    /* ── Editorial Section ── */
+    @keyframes kenBurns {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.06) translate(-0.5%, -0.5%); }
+    }
+
+    .cat-hero--editorial .cat-hero__overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(47, 56, 65, 0.25) 0%,
+        rgba(47, 56, 65, 0.5) 50%,
+        rgba(47, 56, 65, 0.75) 100%
+      );
+    }
+
+    .cat-hero--editorial .cat-hero__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-16) var(--space-6);
+      max-width: 56rem;
+    }
+
+    .cat-hero--editorial .eyebrow {
+      color: var(--gold);
+      letter-spacing: 0.4em;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 0.3s;
+    }
+
+    .cat-hero--editorial h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(3rem, 9vw, 6.5rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: var(--space-6);
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 0.5s;
+    }
+
+    .cat-hero--editorial p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 38rem;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 0.7s;
+    }
+
+    .cat-hero--editorial .btn-row {
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 0.9s;
+    }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: var(--space-10);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 1.1s;
+    }
+
+    .hero-scroll-hint__line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* ── Philosophy Quote Section ── */
+    .philosophy-quote {
+      background: var(--cream);
+      padding: var(--space-24) var(--space-6);
+    }
+
+    .philosophy-quote__inner {
+      max-width: 52rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .philosophy-quote__text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-8);
+    }
+
+    .philosophy-quote__divider {
+      width: 64px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto var(--space-6);
+    }
+
+    .philosophy-quote__attribution {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--gold-dark);
+    }
+
+    /* ── Editorial Section (Enhanced) ── */
     .editorial-section {
       background: #fff;
-      padding: var(--space-16, 5rem) 0;
+      padding: var(--space-20) 0;
     }
+
     .editorial-section .container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: clamp(3rem, 6vw, 6rem);
       align-items: center;
     }
+
+    @media (min-width: 1024px) {
+      .editorial-section .container {
+        grid-template-columns: 1fr 1fr;
+      }
+      .editorial-section--reverse .editorial-section__image-wrap { order: 2; }
+      .editorial-section--reverse .editorial-section__content { order: 1; }
+    }
+
     .editorial-section__image-wrap {
       position: relative;
-      border-radius: var(--radius-lg, 12px);
+      border-radius: var(--radius-lg);
       overflow: hidden;
+      aspect-ratio: 4/5;
     }
+
     .editorial-section__image-wrap img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
       object-fit: cover;
-      aspect-ratio: 3 / 4;
       filter: brightness(0.97) saturate(0.93);
       transition: transform 0.9s ease;
     }
+
     .editorial-section__image-wrap:hover img {
-      transform: scale(1.03);
-    }
-    .editorial-section__content {
-      padding: var(--space-6, 1.5rem) 0;
-    }
-    .editorial-section__eyebrow {
-      display: block;
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold, #b89a5e);
-      margin-bottom: var(--space-5, 1.25rem);
-    }
-    .editorial-section__heading {
-      font-size: clamp(1.5rem, 3vw, 2.4rem);
-      font-weight: 300;
-      letter-spacing: 0.03em;
-      line-height: 1.25;
-      color: var(--ink, #1a1a1a);
-      margin-bottom: var(--space-6, 1.5rem);
-    }
-    .editorial-section__body {
-      font-size: clamp(0.9rem, 1.3vw, 1rem);
-      line-height: 1.85;
-      color: var(--ink-light, #555);
-      margin-bottom: var(--space-5, 1.25rem);
-    }
-    .editorial-section__closing {
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--gold-dark, #96783d);
-      border-left: 2px solid var(--gold, #b89a5e);
-      padding-left: var(--space-4, 1rem);
-      margin-top: var(--space-8, 2rem);
+      transform: scale(1.04);
     }
 
-    /* ── Within the Collection ── */
-    .within-collection {
-      background: var(--cream, #faf8f4);
-      padding: var(--space-16, 5rem) 0;
+    .editorial-section__content {
+      padding: var(--space-6) 0;
     }
-    .within-collection__header {
-      margin-bottom: var(--space-10, 2.5rem);
-    }
-    .within-collection__eyebrow {
+
+    .editorial-section__eyebrow {
       display: block;
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
+      font-size: 11px;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--gold, #b89a5e);
-      margin-bottom: var(--space-3, 0.75rem);
+      color: var(--gold-dark);
+      margin-bottom: var(--space-5);
     }
-    .within-collection__heading {
-      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+
+    .editorial-section__heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
       font-weight: 300;
-      letter-spacing: 0.04em;
-      color: var(--ink, #1a1a1a);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: var(--space-6);
     }
-    .within-collection__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+
+    .editorial-section__body {
+      font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: var(--space-5);
+    }
+
+    .editorial-section__closing {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--gold-dark);
+      border-left: 2px solid var(--gold);
+      padding-left: var(--space-4);
+      margin-top: var(--space-8);
+    }
+
+    /* ── Visual Interlude (Full-bleed Quote) ── */
+    .visual-interlude {
+      position: relative;
+      min-height: 60vh;
       display: flex;
-      flex-direction: column;
-      gap: 0;
-      border-top: 1px solid rgba(0,0,0,0.08);
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
-    .within-collection__item {
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-6, 1.5rem);
-      padding: var(--space-6, 1.5rem) 0;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      transition: background 0.2s;
+
+    .visual-interlude__bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      filter: brightness(0.85) saturate(0.8);
     }
-    .within-collection__item:hover {
-      background: rgba(184, 154, 94, 0.04);
+
+    @media (max-width: 768px) {
+      .visual-interlude__bg {
+        background-attachment: scroll;
+      }
     }
-    .within-collection__item-num {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      color: var(--gold, #b89a5e);
-      min-width: 2.5rem;
-      font-weight: 400;
+
+    .visual-interlude__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(47, 56, 65, 0.65);
     }
-    .within-collection__item-name {
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
+
+    .visual-interlude__content {
+      position: relative;
+      z-index: 2;
+      max-width: 48rem;
+      padding: var(--space-12) var(--space-6);
+      text-align: center;
+    }
+
+    .visual-interlude__text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.25rem, 3.5vw, 2rem);
       font-weight: 300;
-      color: var(--ink, #1a1a1a);
-      letter-spacing: 0.03em;
-      min-width: 18ch;
-    }
-    .within-collection__item-desc {
-      font-size: 0.9rem;
-      color: var(--ink-light, #777);
+      font-style: italic;
       line-height: 1.6;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .visual-interlude__mark {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: var(--space-8) auto 0;
+    }
+
+    /* ── Essence Pillars (Dark Section) ── */
+    .essence-pillars {
+      background: linear-gradient(135deg, var(--dark-2), var(--dark));
+      padding: var(--space-24) var(--space-6);
+    }
+
+    .essence-pillars__header {
+      text-align: center;
+      max-width: 40rem;
+      margin: 0 auto var(--space-16);
+    }
+
+    .essence-pillars__eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      margin-bottom: var(--space-5);
+    }
+
+    .essence-pillars__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 300;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .essence-pillars__grid {
+      display: grid;
+      gap: var(--space-8);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .essence-pillars__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-10);
+      }
+    }
+
+    .essence-pillar {
+      text-align: center;
+      padding: var(--space-8);
+    }
+
+    .essence-pillar__number {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: var(--space-4);
+    }
+
+    .essence-pillar__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: var(--size-xl);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.02em;
+    }
+
+    .essence-pillar__text {
+      font-size: var(--size-sm);
+      line-height: 1.9;
+      color: rgba(255, 255, 255, 0.6);
     }
 
     /* ── CTA Section ── */
     .sleep-cta {
-      background: var(--ink, #1a1a1a);
-      color: #fff;
-      padding: var(--space-20, 7rem) 0;
-      text-align: center;
-    }
-    .sleep-cta__eyebrow {
-      display: block;
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold, #b89a5e);
-      margin-bottom: var(--space-5, 1.25rem);
-    }
-    .sleep-cta__heading {
-      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      line-height: 1.2;
-      margin-bottom: var(--space-6, 1.5rem);
-      color: #fff;
-    }
-    .sleep-cta__body {
-      max-width: 55ch;
-      margin: 0 auto var(--space-10, 2.5rem);
-      font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-      line-height: 1.8;
-      color: rgba(255,255,255,0.7);
+      background: var(--cream);
+      padding: var(--space-24) var(--space-6);
     }
 
-    /* ── Responsive ── */
+    .sleep-cta__inner {
+      max-width: 48rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .sleep-cta__eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: var(--gold-dark);
+      margin-bottom: var(--space-5);
+    }
+
+    .sleep-cta__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 300;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-6);
+    }
+
+    .sleep-cta__text {
+      font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: var(--space-10);
+    }
+
+    /* ── Responsive adjustments ── */
     @media (max-width: 768px) {
-      .editorial-section .container {
-        grid-template-columns: 1fr;
-      }
-      .editorial-section__image-wrap img {
-        aspect-ratio: 4 / 3;
-      }
-      .within-collection__item {
-        flex-direction: column;
-        gap: var(--space-2, 0.5rem);
+      .editorial-section__image-wrap {
+        aspect-ratio: 4/3;
       }
     }
   </style>
@@ -293,107 +486,158 @@
 </nav>
 
 
-<!-- ════ 1. HERO ════ -->
-<section class="cat-hero">
+<!-- ════════════════════════════════════════════════════════════
+     1. CINEMATIC HERO
+     ════════════════════════════════════════════════════════════ -->
+<section class="cat-hero cat-hero--editorial">
   <div class="cat-hero__bg" style="background-image: url('../images/SOUND-MACHINE.jpg');"></div>
   <div class="cat-hero__overlay"></div>
   <div class="cat-hero__content">
     <span class="eyebrow">Collection 02</span>
     <h1>Sleep &amp; Sound</h1>
-    <p>The hour before sleep is the most underrated part of your day. These devices make it count — quieting the noise, softening the light, and giving your nervous system permission to finally let go.</p>
+    <p>Sound machines and sleep-focused devices designed to support calm evenings and gentler mornings.</p>
     <div class="btn-row" style="margin-top:var(--space-8);">
-      <a href="#collection-intro" class="btn btn--dark">Explore the Collection</a>
+      <a href="#philosophy" class="btn btn--ghost-light">Explore the Collection</a>
     </div>
   </div>
-</section>
-
-
-<!-- ════ 2. COLLECTION INTRODUCTION ════ -->
-<section id="collection-intro" class="collection-intro">
-  <div class="container">
-    <span class="collection-intro__eyebrow">Sleep &amp; Sound</span>
-    <h2 class="collection-intro__heading">Designed for the quieter hours.</h2>
-    <p class="collection-intro__body">
-      The Sleep &amp; Sound collection brings together sound machines, ambient glow devices, and sleep-support tools — each one built to help create an environment where rest arrives more naturally. Compact, considered, and built for the bedside.
-    </p>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="hero-scroll-hint__line"></div>
   </div>
 </section>
 
 
-<!-- ════ 3. EDITORIAL SECTION ════ -->
+<!-- ════════════════════════════════════════════════════════════
+     2. PHILOSOPHY QUOTE
+     ════════════════════════════════════════════════════════════ -->
+<section id="philosophy" class="philosophy-quote">
+  <div class="philosophy-quote__inner reveal">
+    <p class="philosophy-quote__text">
+      "Better rest starts with what surrounds you. The quality of your sleep is shaped by the environment you create before it begins."
+    </p>
+    <div class="philosophy-quote__divider"></div>
+    <span class="philosophy-quote__attribution">The Harmony &amp; Balance Philosophy</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     3. EDITORIAL SPREAD — Left Image
+     ════════════════════════════════════════════════════════════ -->
 <section class="editorial-section">
   <div class="container">
-
     <div class="editorial-section__image-wrap reveal">
-      <img
-        src="../images/SOUND-MACHINE.jpg"
-        alt="Harmony &amp; Balance Sound Machine — bedside sleep device"
-      />
+      <img src="../images/SOUND-MACHINE.jpg" alt="Harmony &amp; Balance Sound Machine — bedside sleep device" />
     </div>
-
-    <div class="editorial-section__content reveal">
-      <span class="editorial-section__eyebrow">The thinking behind the collection</span>
-      <h2 class="editorial-section__heading">Better rest starts with what surrounds you.</h2>
+    <div class="editorial-section__content reveal reveal--delay-1">
+      <span class="editorial-section__eyebrow">The Thinking Behind the Collection</span>
+      <h2 class="editorial-section__heading">Quiet by design.<br>Restful by intention.</h2>
       <p class="editorial-section__body">
-        Harmony &amp; Balance Sleep &amp; Sound products are built around one insight: the quality of your rest is shaped by the environment you create before it. These are not gadgets — they are quiet, functional objects that help make the transition to rest feel easier, softer, and more natural.
+        These are not gadgets. They are quiet, functional objects that help make the transition to rest feel easier, softer, and more natural.
       </p>
       <p class="editorial-section__body">
         Whether it is the steady rhythm of white noise filling a room, or the gentle presence of a low-lit device on a nightstand, each piece in the collection is designed to reduce friction and support a calmer close to the day.
       </p>
       <p class="editorial-section__closing">
-        Quiet by design. Restful by intention.
+        The hour before sleep is the most underrated part of your day.
       </p>
     </div>
-
   </div>
 </section>
 
 
-<!-- ════ 4. WITHIN THE COLLECTION ════ -->
-<section class="within-collection">
+<!-- ════════════════════════════════════════════════════════════
+     4. VISUAL INTERLUDE — Full-bleed Quote
+     ════════════════════════════════════════════════════════════ -->
+<section class="visual-interlude">
+  <div class="visual-interlude__bg" style="background-image: url('../images/SOUND-MACHINE.jpg');"></div>
+  <div class="visual-interlude__overlay"></div>
+  <div class="visual-interlude__content reveal">
+    <p class="visual-interlude__text">
+      The things you live with each day should support how you want to feel: clear, restored, and at ease.
+    </p>
+    <span class="visual-interlude__mark"></span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     5. EDITORIAL SPREAD — Right Image (Reversed)
+     ════════════════════════════════════════════════════════════ -->
+<section class="editorial-section editorial-section--reverse">
   <div class="container">
-    <div class="within-collection__header">
-      <span class="within-collection__eyebrow">What we offer</span>
-      <h2 class="within-collection__heading">Within the collection.</h2>
+    <div class="editorial-section__image-wrap reveal">
+      <img src="../images/SOUND-MACHINE.jpg" alt="Sleep collection device detail" />
     </div>
-    <ul class="within-collection__list">
-      <li class="within-collection__item reveal">
-        <span class="within-collection__item-num">01</span>
-        <span class="within-collection__item-name">Portable Sound Machines</span>
-        <span class="within-collection__item-desc">Compact sound companions for white-noise and nature sounds — designed for the bedside, travel, or any space that needs a quieter atmosphere.</span>
-      </li>
-      <li class="within-collection__item reveal reveal--delay-1">
-        <span class="within-collection__item-num">02</span>
-        <span class="within-collection__item-name">Bedside Glow Devices</span>
-        <span class="within-collection__item-desc">Softly illuminated pieces for visual calm — low light that signals the close of the day without the disruption of screens or sharp light sources.</span>
-      </li>
-      <li class="within-collection__item reveal reveal--delay-2">
-        <span class="within-collection__item-num">03</span>
-        <span class="within-collection__item-name">Sleep Atmosphere Essentials</span>
-        <span class="within-collection__item-desc">Objects supporting a quieter environment through sound, light, and ease — the small, considered details that help the room feel more like rest.</span>
-      </li>
-    </ul>
+    <div class="editorial-section__content reveal reveal--delay-1">
+      <span class="editorial-section__eyebrow">Within the Collection</span>
+      <h2 class="editorial-section__heading">Tools for the quieter hours.</h2>
+      <p class="editorial-section__body">
+        Portable sound machines that travel with you. Bedside glow devices that ease the transition from waking to rest. Sleep atmosphere essentials designed to soften the edges of the day.
+      </p>
+      <p class="editorial-section__body">
+        Each piece exists to support a single idea: that rest is not passive — it is something you create.
+      </p>
+    </div>
   </div>
 </section>
 
 
-<!-- ════ 5. CTA SECTION ════ -->
+<!-- ════════════════════════════════════════════════════════════
+     6. ESSENCE PILLARS — Dark Section
+     ════════════════════════════════════════════════════════════ -->
+<section class="essence-pillars">
+  <div class="essence-pillars__header reveal">
+    <span class="essence-pillars__eyebrow">The Essence</span>
+    <h2 class="essence-pillars__title">Three principles of restful design.</h2>
+  </div>
+  <div class="essence-pillars__grid">
+    <div class="essence-pillar reveal">
+      <span class="essence-pillar__number">01</span>
+      <h3 class="essence-pillar__title">Sound as Sanctuary</h3>
+      <p class="essence-pillar__text">
+        White noise and ambient soundscapes designed to quiet the mind and mask the world outside.
+      </p>
+    </div>
+    <div class="essence-pillar reveal reveal--delay-1">
+      <span class="essence-pillar__number">02</span>
+      <h3 class="essence-pillar__title">Light that Softens</h3>
+      <p class="essence-pillar__text">
+        Warm, low glow settings that signal the body it's time to wind down, not wake up.
+      </p>
+    </div>
+    <div class="essence-pillar reveal reveal--delay-2">
+      <span class="essence-pillar__number">03</span>
+      <h3 class="essence-pillar__title">Form that Calms</h3>
+      <p class="essence-pillar__text">
+        Minimal, considered shapes that feel at home on a nightstand — beautiful even when silent.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     7. CTA SECTION
+     ════════════════════════════════════════════════════════════ -->
 <section class="sleep-cta">
-  <div class="container">
-    <span class="sleep-cta__eyebrow">For Wholesale &amp; Trade</span>
-    <h2 class="sleep-cta__heading">Bring the Sleep &amp; Sound collection<br>to your customers.</h2>
-    <p class="sleep-cta__body">
-      The Sleep &amp; Sound collection is available for wholesale and trade buyers. Each product ships shelf-ready with brand-consistent packaging and full category support. Request a line sheet to explore available SKUs, pricing tiers, and minimum order details.
+  <div class="sleep-cta__inner reveal">
+    <span class="sleep-cta__eyebrow">For Retail Partners</span>
+    <h2 class="sleep-cta__title">Bring rest into your assortment.</h2>
+    <p class="sleep-cta__text">
+      Request our wholesale line sheet to explore the full Sleep &amp; Sound collection — pricing, minimums, and product specifications designed for off-price retail discovery.
     </p>
     <div class="btn-row" style="justify-content:center; gap:var(--space-4);">
-      <a href="../index.html#contact" class="btn btn--gold">Request Line Sheet</a>
-      <a href="../index.html#about"   class="btn btn--ghost-light">Learn About the Brand</a>
+      <a href="../index.html#contact" class="btn btn--dark">Request Line Sheet</a>
+      <a href="../index.html#categories" class="btn btn--outline">View All Collections</a>
     </div>
   </div>
 </section>
 
 
-<!-- ════ 6. NEWSLETTER ════ -->
+<!-- ════════════════════════════════════════════════════════════
+     8. NEWSLETTER
+     ════════════════════════════════════════════════════════════ -->
 <div class="newsletter-strip">
   <div class="newsletter-strip__inner">
     <div class="newsletter-strip__copy">
@@ -408,7 +652,9 @@
 </div>
 
 
-<!-- ════ 7. FOOTER ════ -->
+<!-- ════════════════════════════════════════════════════════════
+     9. FOOTER
+     ════════════════════════════════════════════════════════════ -->
 <footer id="site-footer">
   <div class="footer__inner">
     <div class="footer__grid">
