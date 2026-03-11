@@ -762,3 +762,27 @@
   margin: 0;
 }
 /* ─────────────────────────────────────────────────────────── */
+
+/* ════════════════════════════════════════════════════════════════
+   TYPOGRAPHY ENHANCEMENT: Cormorant Garamond for Hero Elements
+   Matches category page editorial style for brand consistency
+   ════════════════════════════════════════════════════════════════ */
+
+/* Hero slide big words - serif for emotional impact */
+#slide-word {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300;
+}
+
+/* Final slide headline - serif for brand moment */
+#final-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300;
+}
+
+/* Final tagline - serif italic for elegance */
+#final-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+}

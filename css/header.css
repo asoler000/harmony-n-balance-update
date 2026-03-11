@@ -423,3 +423,28 @@
   z-index: 1001;
   transition: width 0.1s linear;
 }
+
+/* ── SVG Logo Styling ───────────────────────────────────────── */
+/* For the h_n_b_logo.svg file — properly sized for header/footer */
+.header__logo-svg {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.footer__logo-svg {
+  height: 24px;
+  width: auto;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+/* Responsive: slightly smaller on mobile */
+@media (max-width: 767px) {
+  .header__logo-svg {
+    height: 22px;
+  }
+  .footer__logo-svg {
+    height: 20px;
+  }
+}
